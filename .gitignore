@@ -1,0 +1,6 @@
+# Temporary Files & Directories
+*.log
+*.bak
+*.tmp
+*.swp
+*~
