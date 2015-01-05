@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/Attic/ibus-1.4.2.ebuild,v 1.8 2014/11/12 14:31:12 dlan dead $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.2.ebuild,v 1.7 2013/05/14 06:05:49 naota Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.5"
