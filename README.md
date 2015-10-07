@@ -16,6 +16,7 @@ original portage repository for [Gentoo Linux](http://www.gentoo.org/)
 
 1. Delete below code in `/etc/portage/make.conf`
 
+
     PORTDIR="..."
 
 2. Copy `shimataro.conf` to `/etc/portage/repos.conf`
