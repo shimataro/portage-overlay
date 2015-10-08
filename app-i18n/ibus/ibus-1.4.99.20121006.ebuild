@@ -1,51 +1,43 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.8-r1.ebuild,v 1.2 2014/08/18 08:33:51 dlan Exp $
+# $Header$
 
-EAPI=5
-
-PYTHON_COMPAT=( python2_7 )
+EAPI=4
+PYTHON_DEPEND="python? 2:2.5"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 # Vapigen is needed for the vala binding
 # Valac is needed when building from git for the engine
 
-inherit bash-completion-r1 eutils gnome2-utils multilib python-single-r1 readme.gentoo vala virtualx
+inherit eutils gnome2-utils multilib python vala virtualx
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
-SRC_URI="https://github.com/ibus/ibus/releases/download/${PV}/${P}.tar.gz"
+SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="deprecated gconf gtk +gtk3 +introspection nls +python test vala wayland +X"
+IUSE="dconf deprecated +gconf gtk +gtk3 +introspection nls +python test vala +X"
 REQUIRED_USE="|| ( gtk gtk3 X )
 	deprecated? ( python )
-	python? (
-		${PYTHON_REQUIRED_USE}
-		|| ( deprecated ( gtk3 introspection ) ) )" #342903
+	python? ( || ( deprecated ( gtk3 introspection ) ) )" #342903
 
-COMMON_DEPEND="
-	>=dev-libs/glib-2.26:2
+COMMON_DEPEND=">=dev-libs/glib-2.26:2
 	gnome-base/librsvg:2
 	sys-apps/dbus[X?]
 	app-text/iso-codes
-	>=gnome-base/dconf-0.13.4
-	x11-libs/libnotify
 
+	dconf? ( >=gnome-base/dconf-0.13.4 )
 	gconf? ( >=gnome-base/gconf-2.12:2 )
 	gtk? ( x11-libs/gtk+:2 )
 	gtk3? ( x11-libs/gtk+:3 )
-	python? ( ${PYTHON_DEPS} )
 	X? (
 		x11-libs/libX11
 		x11-libs/gtk+:2 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.8 )
-	nls? ( virtual/libintl )
-	wayland? ( dev-libs/wayland )"
+	nls? ( virtual/libintl )"
 RDEPEND="${COMMON_DEPEND}
-	x11-apps/setxkbmap
 	python? (
 		dev-python/pyxdg
 		deprecated? (
@@ -64,8 +56,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16.1 )
-	vala? ( $(vala_depend) )
-	gnome-base/gconf"
+	vala? ( $(vala_depend) )"
 
 # stress test in bus/ fails
 # IBUS-CRITICAL **: bus_test_client_init: assertion `ibus_bus_is_connected (_bus)' failed
@@ -73,46 +64,33 @@ RESTRICT="test"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-DISABLE_AUTOFORMATTING="yes"
-DOC_CONTENTS="To use ibus, you should:
-1. Get input engines from sunrise overlay.
-Run \"emerge -s ibus-\" in your favorite terminal
-for a list of packages we already have.
-
-2. Setup ibus:
-$ ibus-setup
-
-3. Set the following in your user startup scripts
-such as .xinitrc, .xsession or .xprofile:
-
-export XMODIFIERS=\"@im=ibus\"
-export GTK_IM_MODULE=\"ibus\"
-export QT_IM_MODULE=\"xim\"
-ibus-daemon -d -x
-"
-
 pkg_setup() {
-	use python && python-single-r1_pkg_setup
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
 	# We run "dconf update" in pkg_postinst/postrm to avoid sandbox violations
-	sed -e 's/dconf update/:/' \
+	sed -e 's/dconf update/$(NULL)/' \
 		-i data/dconf/Makefile.{am,in} || die
+	use python && python_clean_py-compile_files
 	use vala && vala_src_prepare
 }
 
 src_configure() {
 	local python_conf
 	if use python; then
-		python_conf="PYTHON=${PYTHON}
+		# We cannot call $(PYTHON) if we haven't called python_pkg_setup
+		python_conf="PYTHON=$(PYTHON)
 			$(use_enable deprecated python-library)
 			$(use_enable gtk3 setup)"
 	else
 		python_conf="--disable-python-library --disable-setup"
 	fi
 	econf \
-		--enable-dconf \
+		$(use_enable dconf) \
 		$(use_enable introspection) \
 		$(use_enable gconf) \
 		$(use_enable gtk gtk2) \
@@ -121,9 +99,8 @@ src_configure() {
 		$(use_enable gtk3 ui) \
 		$(use_enable nls) \
 		$(use_enable test tests) \
-		$(use_enable X xim) \
 		$(use_enable vala) \
-		$(use_enable wayland) \
+		$(use_enable X xim) \
 		${python_conf}
 }
 
@@ -135,41 +112,59 @@ src_test() {
 src_install() {
 	default
 
-	prune_libtool_files --all
+	find "${ED}" -name '*.la' -exec rm -f {} +
 
-	mv "${ED}"/usr/share/bash-completion/completions/ibus.bash "${T}"
-	rm -rf "${ED}"/usr/share/bash-completion || die
-	newbashcomp "${T}"/ibus.bash ${PN}
 	insinto /etc/X11/xinit/xinput.d
 	newins xinput-ibus ibus.conf
 
 	keepdir /usr/share/ibus/{engine,icons} #289547
-
-	use deprecated && python_optimize
-	use python && use gtk3 && python_optimize
-
-	readme.gentoo_create_doc
 }
 
 pkg_preinst() {
 	use gconf && gnome2_gconf_savelist
-	gnome2_schemas_savelist
 	gnome2_icon_savelist
 }
 
 pkg_postinst() {
+	if use dconf; then
+		ebegin "Updating dconf system databases"
+		dconf update
+		eend $?
+	fi
 	use gconf && gnome2_gconf_install
 	use gtk && gnome2_query_immodules_gtk2
 	use gtk3 && gnome2_query_immodules_gtk3
-	gnome2_schemas_update
+	use deprecated && python_mod_optimize ${PN}
+	use python && use gtk3 && python_mod_optimize /usr/share/${PN}
 	gnome2_icon_cache_update
-	readme.gentoo_print_elog
+
+	elog "To use ibus, you should:"
+	elog "1. Get input engines from sunrise overlay."
+	elog "   Run \"emerge -s ibus-\" in your favorite terminal"
+	elog "   for a list of packages we already have."
+	elog
+	elog "2. Setup ibus:"
+	elog
+	elog "   $ ibus-setup"
+	elog
+	elog "3. Set the following in your user startup scripts"
+	elog "   such as .xinitrc, .xsession or .xprofile:"
+	elog
+	elog "   export XMODIFIERS=\"@im=ibus\""
+	elog "   export GTK_IM_MODULE=\"ibus\""
+	elog "   export QT_IM_MODULE=\"xim\""
+	elog "   ibus-daemon -d -x"
 }
 
 pkg_postrm() {
+	if use dconf; then
+		ebegin "Updating dconf system databases"
+		dconf update
+		eend $?
+	fi
 	use gtk && gnome2_query_immodules_gtk2
 	use gtk3 && gnome2_query_immodules_gtk3
-	use gconf && gnome2_schemas_update
-	gnome2_schemas_savelist
+	use deprecated && python_mod_cleanup ${PN}
+	use python && use gtk3 && python_mod_cleanup /usr/share/${PN}
 	gnome2_icon_cache_update
 }

@@ -1,11 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.1.ebuild,v 1.15 2013/05/14 06:05:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/Attic/ibus-1.4.0.ebuild,v 1.4 2012/02/05 16:33:16 matsuu dead $
 
-EAPI=4
+EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
-
-inherit eutils gnome2-utils multilib python autotools vala
+inherit confutils eutils gnome2-utils multilib python autotools
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://github.com/ibus/ibus/wiki"
@@ -13,14 +12,13 @@ SRC_URI="http://github.com/ibus/ibus/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-fbsd"
-IUSE="dconf doc +gconf gtk gtk3 +introspection nls +python vala +X"
-REQUIRED_USE="|| ( gtk gtk3 X )" #342903
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+IUSE="dconf doc +gconf gtk gtk3 introspection nls +python vala X"
 
-RDEPEND=">=dev-libs/glib-2.26
+RDEPEND=">=dev-libs/glib-2.26:2
 	dconf? ( >=gnome-base/dconf-0.7.5 )
 	gconf? ( >=gnome-base/gconf-2.12:2 )
-	gnome-base/librsvg
+	gnome-base/librsvg:2
 	sys-apps/dbus[X?]
 	app-text/iso-codes
 	gtk? ( x11-libs/gtk+:2 )
@@ -34,26 +32,23 @@ RDEPEND=">=dev-libs/glib-2.26
 		dev-python/notify-python
 		>=dev-python/dbus-python-0.83
 	)
-	nls? ( virtual/libintl )
-	vala? ( $(vala_depend) )"
+	nls? ( virtual/libintl )"
 #	X? ( x11-libs/libX11 )
 #	gtk? ( x11-libs/gtk+:2 x11-libs/gtk+:3 )
+#	vala? ( dev-lang/vala )
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.8.1
-	dev-util/intltool
-	virtual/pkgconfig
+	dev-perl/XML-Parser
+	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 RDEPEND="${RDEPEND}
-	x11-apps/setxkbmap
 	python? (
 		dev-python/pygtk
 		dev-python/pyxdg
 	)"
 
 RESTRICT="test"
-
-DOCS="AUTHORS ChangeLog NEWS README"
 
 update_gtk_immodules() {
 	local GTK2_CONFDIR="/etc/gtk-2.0"
@@ -75,6 +70,8 @@ update_gtk3_immodules() {
 }
 
 pkg_setup() {
+	# bug #342903
+	confutils_require_any X gtk gtk3
 	if use python; then
 		python_set_active_version 2
 		python_pkg_setup
@@ -82,22 +79,16 @@ pkg_setup() {
 }
 
 src_prepare() {
-	>py-compile #397497
-	echo ibus/_config.py >> po/POTFILES.skip
-	use vala && vala_src_prepare
+	mv py-compile py-compile.orig || die
+	ln -s "$(type -P true)" py-compile || die
+	echo "ibus/_config.py" >> po/POTFILES.skip || die
+	sed -i -e "s/python/python2/" setup/ibus-setup.in ui/gtk/ibus-ui-gtk.in || die
 
-	epatch \
-		"${FILESDIR}"/${PN}-gconf-2.m4.patch \
-		"${FILESDIR}"/${PN}-1.4.0-machine-id-fallback.patch \
-		"${FILESDIR}"/${PN}-1.4.1-gir.patch \
-		"${FILESDIR}"/${PN}-1.4.1-libxslt-1.1.27.patch
-
+	epatch "${FILESDIR}"/${P}-doc-typo.patch
 	eautoreconf
 }
 
 src_configure() {
-	# We cannot call $(PYTHON) if we haven't called python_pkg_setup
-	use python && PYTHON=$(PYTHON) || PYTHON=
 	econf \
 		$(use_enable dconf) \
 		$(use_enable doc gtk-doc) \
@@ -110,19 +101,21 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable python) \
 		$(use_enable vala) \
-		$(use_enable X xim) \
-		PYTHON="${PYTHON}"
+		$(use_enable X xim) || die
 }
 
 src_install() {
-	default
+	emake DESTDIR="${D}" install || die
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	find "${ED}" -name '*.la' -type f -delete || die
 
 	insinto /etc/X11/xinit/xinput.d
-	newins xinput-ibus ibus.conf
+	newins xinput-ibus ibus.conf || die
 
-	keepdir /usr/share/ibus/{engine,icons} #289547
+	# bug 289547
+	keepdir /usr/share/ibus/{engine,icons} || die
+
+	dodoc AUTHORS ChangeLog NEWS README || die
 }
 
 pkg_preinst() {
