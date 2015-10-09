@@ -11,6 +11,7 @@ original portage repository for [Gentoo Linux](http://www.gentoo.org/)
 | `mate-extra/topmenu-gtk` | [topmenu-gtk](https://git.javispedro.com/cgit/topmenu-gtk.git/about/) | A Gtk+ module and Mate/Xfce panel applets for a global menubar. | |
 | `www-misc/webtaku` | [webtaku](https://github.com/shimataro/webtaku) | webpage snapshot image generator | |
 | `x11-misc/ktsuss` | [ktsuss](https://github.com/nomius/ktsuss) | Graphical version of su written in C and GTK+ 2 | append `sudo` USE flag |
+| `x11-themes/MBuntu-Y-icons` | [MBuntu-Y-icons](https://launchpad.net/~noobslab/+archive/ubuntu/themes) | MBuntu icons & cursors themes | OSX-like icons & cursors |
 
 # How to use
 
