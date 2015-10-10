@@ -1,7 +1,7 @@
 portage-overlay
 ===============
 
-original portage repository for [Gentoo Linux](http://www.gentoo.org/)
+personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
 
 # Included packages
 
