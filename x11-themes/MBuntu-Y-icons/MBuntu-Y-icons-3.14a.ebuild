@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="MBuntu icons & cursors themes"
+DESCRIPTION="MBuntu Yosemite icons & cursors themes"
 HOMEPAGE="https://launchpad.net/~noobslab/+archive/ubuntu/themes"
 SRC_URI="http://ppa.launchpad.net/noobslab/themes/ubuntu/pool/main/m/mbuntu-y-icons-v5/mbuntu-y-icons-v5_3.14.a~vivid~NoobsLab.com.tar.gz"
 
