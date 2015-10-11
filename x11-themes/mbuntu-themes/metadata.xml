@@ -8,6 +8,6 @@
 		<description>Proxy maintainer. Assign bugs to him</description>
 	</maintainer>
 	<upstream>
-		<remote-id>MBuntu-themes</remote-id>
+		<remote-id>mbuntu-themes</remote-id>
 	</upstream>
 </pkgmetadata>
