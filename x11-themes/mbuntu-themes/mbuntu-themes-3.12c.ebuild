@@ -16,10 +16,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	mv "${WORKDIR}/${PN}" "${WORKDIR}/${P}"
-}
+S="${WORKDIR}/Mbuntu-themes"
 
 src_install() {
 	for NAME in Mac-2.0 Mbuntu-AC Mbuntu-Mb Mbuntu-Mb-For-Mint Mbuntu-X Mbuntu-Zukimac Mbuntu-Zukimac-ml Mbuntu-Zukimac-ml2 Mbuntu-iB Mbuntu-iB-For-Mint;

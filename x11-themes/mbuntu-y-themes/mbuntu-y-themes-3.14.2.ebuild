@@ -16,10 +16,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	mv "${WORKDIR}/${PN}" "${WORKDIR}/${P}"
-}
+S="${WORKDIR}/Mbuntu-Y-themes"
 
 src_install() {
 	for NAME in MBuntu-Y MBuntu-Y-For-Cinnamon MBuntu-Y-Transparent-Panel MBuntu-Y-Unity;
