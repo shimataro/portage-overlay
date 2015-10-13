@@ -7,6 +7,7 @@ personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
 
 | package | name | description | note |
 |---------|------|-------------|------|
+| `app-crypt/veracrypt` | [VeraCrypt](https://veracrypt.codeplex.com/) | An open source disk encryption tool with strong security for the Paranoid | |
 | `app-i18n/ibus` | [iBus](https://github.com/ibus/ibus/wiki) | Intelligent Input Bus for Linux/Unix | version 1.4.x / GitHub version |
 | `mate-extra/topmenu-gtk` | [topmenu-gtk](https://git.javispedro.com/cgit/topmenu-gtk.git/about/) | A Gtk+ module and Mate/Xfce panel applets for a global menubar. | |
 | `net-im/telegram-bin` | [Telegram (binary package)](https://telegram.org/) | a new era of messaging | binary package |
