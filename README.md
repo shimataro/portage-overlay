@@ -9,6 +9,7 @@ personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
 |---------|------|-------------|------|
 | `app-i18n/ibus` | [iBus](https://github.com/ibus/ibus/wiki) | Intelligent Input Bus for Linux/Unix | version 1.4.x / GitHub version |
 | `mate-extra/topmenu-gtk` | [topmenu-gtk](https://git.javispedro.com/cgit/topmenu-gtk.git/about/) | A Gtk+ module and Mate/Xfce panel applets for a global menubar. | |
+| `net-im/telegram-bin` | [Telegram (binary package)](https://telegram.org/) | a new era of messaging | binary package |
 | `www-misc/webtaku` | [webtaku](https://github.com/shimataro/webtaku) | webpage snapshot image generator | |
 | `x11-misc/ktsuss` | [ktsuss](https://github.com/nomius/ktsuss) | Graphical version of su written in C and GTK+ 2 | append `sudo` USE flag |
 | `x11-themes/mbuntu-y-icons` | [MBuntu-Y-icons](https://launchpad.net/~noobslab/+archive/ubuntu/themes) | MBuntu Y icons & cursors themes | OSX Yosemite-like icons & cursors |
