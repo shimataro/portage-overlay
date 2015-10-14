@@ -4,6 +4,8 @@
 
 EAPI=3
 
+inherit eutils
+
 DESCRIPTION="a new era of messaging"
 HOMEPAGE="https://telegram.org/"
 SRC_URI="
@@ -22,15 +24,13 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}"
 
 src_install() {
-	insinto /opt/${PN}
-	insopts -m0755
-	doins -r Telegram/*
+	local DIR="/opt/${PN}"
 
-	# icon
-	insopts -m0644
-	doins ${FILESDIR}/telegram.svg
+	exeinto ${DIR}
+	doexe Telegram/*
 
-	# desktop entry
-	insinto /usr/share/applications
-	doins ${FILESDIR}/telegramdesktop.desktop
+	doicon ${FILESDIR}/telegram.svg
+
+	make_wrapper ${PN} "${DIR}/Telegram -- %u"
+	make_desktop_entry ${PN} "Telegram Desktop" "telegram" "Network;" "MimeType=application/x-xdg-protocol-tg;x-scheme-handler/tg;"
 }
