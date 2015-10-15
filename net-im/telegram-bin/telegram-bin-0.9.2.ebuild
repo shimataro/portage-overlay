@@ -31,6 +31,5 @@ src_install() {
 
 	doicon ${FILESDIR}/telegram.svg
 
-	make_wrapper ${PN} "${DIR}/Telegram -- %u"
-	make_desktop_entry ${PN} "Telegram Desktop" "telegram" "Network;" "MimeType=application/x-xdg-protocol-tg;x-scheme-handler/tg;"
+	make_desktop_entry "${DIR}/Telegram -- %u" "Telegram Desktop" "telegram" "Network;" "MimeType=application/x-xdg-protocol-tg;x-scheme-handler/tg;"
 }
