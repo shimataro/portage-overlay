@@ -1,0 +1,6 @@
+# ChangeLog for app-editors/atom
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  15 Oct 2015; Shimataro <shimataro@zelkova.cc> +atom-1.0.10.ebuild, +atom-1.0.11.ebuild, +atom-1.0.12.ebuild, +atom-1.0.13.ebuild, +atom-1.0.14.ebuild, +atom-1.0.15.ebuild, +atom-1.0.16.ebuild, +atom-1.0.17.ebuild, +atom-1.0.18.ebuild, +atom-1.0.19.ebuild, +atom-9999.ebuild, +metadata.xml:
+  first release of ebuild package.
