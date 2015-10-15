@@ -8,8 +8,8 @@ PYTHON_DEPEND="python? 2:2.5"
 inherit eutils gnome2-utils multilib python autotools vala
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
-HOMEPAGE="http://code.google.com/p/ibus/"
-SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="http://github.com/ibus/ibus/wiki"
+SRC_URI="http://github.com/ibus/ibus/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
