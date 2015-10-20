@@ -4,7 +4,8 @@
 
 EAPI=5
 
-inherit git-r3
+WX_GTK_VER="3.0"
+inherit git-r3 wxwidgets
 
 DESCRIPTION="An open source disk encryption tool with strong security for the Paranoid"
 HOMEPAGE="https://veracrypt.codeplex.com/"
