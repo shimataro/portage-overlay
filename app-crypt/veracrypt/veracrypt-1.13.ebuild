@@ -28,16 +28,16 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	local OPTIONS="VERBOSE=1"
+	local OPTIONS=("VERBOSE=1")
 	if use !asm; then
-		OPTIONS="${OPTIONS} NOASM=1"
+		OPTIONS+=("NOASM=1")
 	fi
 	if use !wxwidgets; then
-		OPTIONS="${OPTIONS} NOGUI=1"
+		OPTIONS+=("NOGUI=1")
 	fi
 
 	cd src
-	emake ${OPTIONS} TC_EXTRA_CFLAGS="${CFLAGS}" TC_EXTRA_CXXFLAGS="${CXXFLAGS}"
+	emake ${OPTIONS[@]} TC_EXTRA_CFLAGS="${CFLAGS}" TC_EXTRA_CXXFLAGS="${CXXFLAGS}"
 }
 
 src_install() {
