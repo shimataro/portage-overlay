@@ -14,6 +14,7 @@ personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
 | `net-im/telegram-bin` | [Telegram (binary package)](https://telegram.org/) | a new era of messaging | binary package |
 | `www-misc/webtaku` | [webtaku](https://github.com/shimataro/webtaku) | webpage snapshot image generator | |
 | `x11-misc/ktsuss` | [ktsuss](https://github.com/nomius/ktsuss) | Graphical version of su written in C and GTK+ 2 | append `sudo` USE flag |
+| `x11-themes/mbuntu-plymouth` | [MBuntu-plymouth](https://launchpad.net/~noobslab/+archive/ubuntu/themes) | MBuntu plymouth theme | OSX-like boot splash theme |
 | `x11-themes/mbuntu-y-icons` | [MBuntu-Y-icons](https://launchpad.net/~noobslab/+archive/ubuntu/themes) | MBuntu Y icons & cursors themes | OSX Yosemite-like icons & cursors |
 | `x11-themes/mbuntu-y-themes` | [MBuntu-Y-themes](https://launchpad.net/~noobslab/+archive/ubuntu/themes) | MBuntu Y themes | OSX Yosemite-like themes |
 | `x11-themes/mbuntu-themes` | [MBuntu-themes](https://launchpad.net/~noobslab/+archive/ubuntu/themes) | MBuntu themes | OSX-like themes |
