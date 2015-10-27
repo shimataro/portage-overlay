@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=3
 
 inherit git-r3
 
@@ -38,9 +38,9 @@ src_compile() {
 
 src_install() {
 	./script/grunt install --install-dir ${D}/usr
+	dosed "s:${D}:/:g" /usr/share/applications/atom.desktop
 }
 
 pkg_postinst() {
-	sed -i -r "s/${D//\//\\/}/\//g" /usr/share/applications/atom.desktop
 	rmdir ${NPMDIR}
 }
