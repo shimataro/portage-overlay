@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  31 Oct 2015; Shimataro <shimataro@zelkova.cc> +atom-1.1.0.ebuild, +metadata.xml:
+  version bump.
+
   27 Oct 2015; Shimataro <shimataro@zelkova.cc> +atom-1.0.8.ebuild, +atom-1.0.9.ebuild, +atom-1.0.10.ebuild, +atom-1.0.11.ebuild, +atom-1.0.12.ebuild, +atom-1.0.13.ebuild, +atom-1.0.14.ebuild, +atom-1.0.15.ebuild, +atom-1.0.16.ebuild, +atom-1.0.17.ebuild, +atom-1.0.18.ebuild, +atom-1.0.19.ebuild, +atom-9999.ebuild, +metadata.xml:
   refactorerd ebuild files.
 
