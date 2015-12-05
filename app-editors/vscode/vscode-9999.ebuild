@@ -56,8 +56,12 @@ src_install() {
 	insinto ${TARGET_DIR}
 	doins -r ${WORKDIR}/VSCode-${PLATFORM}/*
 
+	insinto "${TARGET_DIR}/resources/app/node_modules/vscode-textmate/node_modules/oniguruma/build/Release/"
+	doins "${FILESDIR}/versions/${PV}/${PLATFORM}/onig_scanner.node"
+
 	# change permissions
 	fperms +x "${TARGET_DIR}/Code [OSS Build]"
+	fperms +x "${TARGET_DIR}/resources/app/node_modules/vscode-textmate/node_modules/oniguruma/build/Release/onig_scanner.node"
 
 	# symbolic links
 	dosym "${TARGET_DIR}/Code [OSS Build]" /usr/bin/vscode
