@@ -32,19 +32,15 @@ RDEPEND="
 	dev-python/pycairo
 "
 
-src_configure() {
 #aclocal
 #automake --add-missing
 #autoreconf
-	eaclocal
-	eautomake --add-missing
-	eautoreconf
-}
-
-src_compile() {
 #./configure --prefix=/usr
 #make
 #sudo make install
-	econf
-	emake
+
+src_prepare() {
+	eaclocal
+	eautomake --add-missing
+	eautoreconf
 }
