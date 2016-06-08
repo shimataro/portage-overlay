@@ -2,6 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  08 Jun 2016; Shimataro <shimataro@zelkova.cc> +vscode-1.1.1.ebuild, vscode-9999.ebuild:
+  version bump.
+  update template.
+
   30 Apr 2016; Shimataro <shimataro@zelkova.cc> vscode-1.0.0.ebuild:
   mask v1.0.0.
 
