@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  08 Jun 2016; Shimataro <shimataro@zelkova.cc> +telegram-bin-0.9.48.ebuild:
+  Version bump.
+
   30 Apr 2016; Shimataro <shimataro@zelkova.cc> +telegram-bin-0.9.44.ebuild:
   Version bump.
 
