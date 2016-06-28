@@ -1,0 +1,6 @@
+repo_name       eol=lf
+layout.conf     eol=lf
+ChangeLog       eol=lf
+Manifest        eol=lf
+*.ebuild        eol=lf
+*.xml           eol=lf

@@ -1,0 +1,9 @@
+# ChangeLog for x11-themes/mbuntu-themes
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  13 Oct 2015; Shimataro <shimataro@zelkova.cc> +mbuntu-themes-3.6.ebuild, +mbuntu-themes-3.12c.ebuild:
+  Fixed ${S}
+
+  10 Oct 2015; Shimataro <shimataro@zelkova.cc> +mbuntu-themes-3.6.ebuild, +mbuntu-themes-3.12c.ebuild, +metadata.xml:
+  first release of ebuild package.

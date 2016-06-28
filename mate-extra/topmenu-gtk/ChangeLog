@@ -1,0 +1,9 @@
+# ChangeLog for mate-extra/topmenu-gtk
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  21 Apr 2016; Shimataro <shimataro@zelkova.cc> +topmenu-gtk-0.2.2.ebuild:
+  version bump.
+
+  06 Oct 2015; Shimataro <shimataro@zelkova.cc> +topmenu-gtk-0.1.ebuild, +topmenu-gtk-0.2.ebuild, +topmenu-gtk-0.2.1.ebuild, +topmenu-gtk-9999.ebuild, +metadata.xml, +files/gtkrc-2.0:
+  first release of ebuild package.

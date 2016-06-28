@@ -1,0 +1,31 @@
+# ChangeLog for www-misc/webtaku
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  07 Oct 2015; Shimataro <shimataro@zelkova.cc> +webtaku-9999.ebuild:
+
+  11 Nov 2014; Shimataro <shimataro@zelkova.cc> +webtaku-1.2.5.ebuild:
+  New options:
+  * --timeout
+  * --max-requests
+  Specification changes:
+  * exit status
+  * generate image even if page has too many requests
+  * log message format
+  * "--version" option's output
+
+  12 Aug 2014; Shimataro <shimataro@zelkova.cc> +webtaku-1.2.4.ebuild:
+  * supported "--default-encoding" option
+
+  13 May 2014; Shimataro <shimataro@zelkova.cc> +webtaku-1.2.3.ebuild:
+  * emerge Intel C++ Compiler with "icc" USE flag
+
+  10 May 2014; Shimataro <shimataro@zelkova.cc> +webtaku-1.2.2.ebuild:
+  * supported "icc" USE flag
+
+  03 May 2014; Shimataro <shimataro@zelkova.cc> +webtaku-1.2.1.ebuild:
+  * Instruction for Gentoo with no GUI
+  * Maintained the MAN files
+
+  28 Apr 2014; Shimataro <shimataro@zelkova.cc> +webtaku-1.2.ebuild, +metadata.xml:
+  first release of ebuild package.
