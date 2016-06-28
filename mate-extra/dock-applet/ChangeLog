@@ -1,0 +1,6 @@
+# ChangeLog for mate-extra/dock-applet
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  21 Apr 2016; Shimataro <shimataro@zelkova.cc> +dock-applet-0.70.ebuild, +dock-applet-9999.ebuild, +metadata.xml:
+  first release of ebuild package.
