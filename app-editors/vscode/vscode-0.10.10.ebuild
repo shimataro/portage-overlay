@@ -29,16 +29,16 @@ RDEPEND=""
 TARGET_DIR="/usr/share/${PN}"
 EXEFILE="code-oss"
 PLATFORM=""
-if use amd64; then
-	PLATFORM="linux-x64"
-fi
-if use x86; then
-	PLATFORM="linux-ia32"
-fi
-
 NPMDIR="/usr/etc"
 
 pkg_setup() {
+	if use amd64; then
+		PLATFORM="linux-x64"
+	fi
+	if use x86; then
+		PLATFORM="linux-ia32"
+	fi
+
 	if [ ! -d ${NPMDIR} ]; then
 		mkdir ${NPMDIR}
 	fi

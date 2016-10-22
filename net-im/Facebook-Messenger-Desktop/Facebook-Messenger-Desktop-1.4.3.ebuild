@@ -23,14 +23,15 @@ RDEPEND=""
 
 TARGET_DIR="/opt/MessengerForDesktop"
 PLATFORM=""
-if use amd64; then
-	PLATFORM="linux64"
-fi
-if use x86; then
-	PLATFORM="linux32"
-fi
 
 pkg_setup() {
+	if use amd64; then
+		PLATFORM="linux64"
+	fi
+	if use x86; then
+		PLATFORM="linux32"
+	fi
+
 	if [ -z ${PLATFORM} ]; then
 		eerror
 		eerror "!!! Invalid Platform !!!"
