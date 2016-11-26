@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  26 Nov 2016; Shimataro <shimataro@zelkova.cc> +arc-theme-20161119.ebuild:
+  Version bump.
+
   08 Oct 2016; Shimataro <shimataro@zelkova.cc> +arc-theme-20161005.ebuild:
   Version bump.
 
