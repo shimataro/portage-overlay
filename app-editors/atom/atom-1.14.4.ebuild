@@ -15,7 +15,7 @@ EGIT_COMMIT="v${PV}"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="
@@ -42,6 +42,10 @@ pkg_setup() {
 	if [ ! -d ${NPMDIR} ]; then
 		mkdir ${NPMDIR}
 	fi
+}
+
+src_configure() {
+	epatch -p1 "${FILESDIR}/1.14.patch"
 }
 
 src_compile() {

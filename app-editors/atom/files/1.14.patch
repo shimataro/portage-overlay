@@ -1,0 +1,12 @@
+diff --git a/apm/package.json b/apm/package.json
+index ede2d1b..0793170 100644
+--- a/apm/package.json
++++ b/apm/package.json
+@@ -6,6 +6,6 @@
+     "url": "https://github.com/atom/atom.git"
+   },
+   "dependencies": {
+-    "atom-package-manager": "1.15.3"
++    "atom-package-manager": "1.16.0"
+   }
+ }
