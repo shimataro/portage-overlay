@@ -44,10 +44,6 @@ pkg_setup() {
 	fi
 }
 
-src_configure() {
-	epatch -p1 "${FILESDIR}/1.14.patch"
-}
-
 src_compile() {
 	./script/build || die "!!!failed to compile atom!!!"
 }
