@@ -19,6 +19,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="
+	gnome-base/gconf
 	x11-libs/libX11
 "
 

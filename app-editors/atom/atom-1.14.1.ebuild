@@ -18,6 +18,7 @@ KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND="
+	gnome-base/gconf
 	gnome-base/libgnome-keyring
 "
 
