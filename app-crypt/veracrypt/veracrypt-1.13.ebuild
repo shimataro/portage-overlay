@@ -25,7 +25,10 @@ DEPEND="
 	x11-libs/wxGTK:3.0
 	asm? ( dev-lang/nasm )
 "
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	sys-fs/cryptsetup
+"
 
 src_compile() {
 	local OPTIONS=("VERBOSE=1")
