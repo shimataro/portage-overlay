@@ -1,0 +1,6 @@
+# ChangeLog for media-fonts/source-han-serif
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  09 Apr 2017; Shimataro <shimataro@zelkova.cc> +source-han-serif-1.000.ebuild:
+  first release of ebuild package.

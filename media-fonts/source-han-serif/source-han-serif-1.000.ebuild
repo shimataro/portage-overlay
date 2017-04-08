@@ -1,0 +1,37 @@
+# Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Id$
+
+EAPI=5
+
+DESCRIPTION="Source Han Serif"
+HOMEPAGE="http://adobe.ly/SourceHanSerif"
+SRC_URI="https://github.com/adobe-fonts/${PN}/archive/${PV}R.tar.gz -> ${P}.tar.gz"
+
+LICENSE="OFL-1.1"
+SLOT="0"
+KEYWORDS="alpha amd64 arm arm64 mips ppc ppc64 sparc x86"
+IUSE="l10n_ja l10n_ko l10n_zh-CN l10n_zh-TW"
+
+DEPEND=""
+RDEPEND=""
+
+S="${WORKDIR}/${P}R/OTF"
+
+src_install() {
+	declare -A hash_
+	hash_["ja"]="Japanese"
+	hash_["ko"]="Korean"
+	hash_["zh-CN"]="SimplifiedChinese"
+	hash_["zh-TW"]="TraditionalChinese"
+
+	for l in ja ko zh-CN zh-TW;
+	do
+		local ll=${hash_[${l}]}
+		if use l10n_${l};
+		then
+			insinto /usr/share/fonts/${PN}/${l}
+			doins -r ${WORKDIR}/${P}R/OTF/${ll}/*.otf
+		fi
+	done
+}
