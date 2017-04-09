@@ -11,7 +11,7 @@ SRC_URI="https://github.com/adobe-fonts/${PN}/archive/${PV}R.tar.gz -> ${P}.tar.
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm arm64 mips ppc ppc64 sparc x86"
-IUSE="+otc l10n_ja l10n_ko l10n_zh-CN l10n_zh-TW"
+IUSE="-otc l10n_ja l10n_ko l10n_zh-CN l10n_zh-TW"
 
 DEPEND=""
 RDEPEND=""
