@@ -11,12 +11,12 @@ SRC_URI="https://github.com/adobe-fonts/${PN}/archive/${PV}R.tar.gz -> ${P}.tar.
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm arm64 mips ppc ppc64 sparc x86"
-IUSE="l10n_ja l10n_ko l10n_zh-CN l10n_zh-TW"
+IUSE="+otc l10n_ja l10n_ko l10n_zh-CN l10n_zh-TW"
 
 DEPEND=""
 RDEPEND=""
 
-S="${WORKDIR}/${P}R/OTF"
+S="${WORKDIR}/${P}R"
 
 src_install() {
 	declare -A hash_
@@ -25,13 +25,19 @@ src_install() {
 	hash_["zh-CN"]="SimplifiedChinese"
 	hash_["zh-TW"]="TraditionalChinese"
 
+	if use otc;
+	then
+		insinto /usr/share/fonts/${PN}
+		doins -r ${S}/OTC/*.ttc
+	fi
+
 	for l in ja ko zh-CN zh-TW;
 	do
 		local ll=${hash_[${l}]}
 		if use l10n_${l};
 		then
 			insinto /usr/share/fonts/${PN}/${l}
-			doins -r ${WORKDIR}/${P}R/OTF/${ll}/*.otf
+			doins -r ${S}/OTF/${ll}/*.otf
 		fi
 	done
 }
