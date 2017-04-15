@@ -1,0 +1,6 @@
+# ChangeLog for media-fonts/source-han-code-jp
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  15 Apr 2017; Shimataro <shimataro@zelkova.cc> +source-han-code-jp-2.000.ebuild:
+  first release of ebuild package.
