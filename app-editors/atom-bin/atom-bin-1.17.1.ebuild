@@ -33,7 +33,7 @@ pkg_setup() {
 }
 
 src_install () {
-	cd ${WORKDIR}/${PF}-${PLATFORM}
+	cd ${WORKDIR}/atom-${PV}-${PLATFORM}
 
 	insinto ${TARGET_DIR}
 	doins -r *

@@ -1,0 +1,6 @@
+# ChangeLog for app-editors/atom-bin
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  11 Jun 2017; Shimataro <shimataro@zelkova.cc> +atom-bin-1.17.0.build, +atom-bin-1.17.1.ebuild, +atom-bin-1.17.2.ebuild:
+  rename atom to aton-bin.
