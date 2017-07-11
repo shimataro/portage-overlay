@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  11 Jul 2017; Shimataro <shimataro@zelkova.cc> +veracrypt-1.20.ebuild, +veracrypt-1.21.ebuild:
+  Version bump.
+
   25 Mar 2017; Shimataro <shimataro@zelkova.cc> veracrypt-1.12.ebuild, veracrypt-1.13.ebuild, veracrypt-1.14.ebuild, veracrypt-1.15.ebuild, veracrypt-1.16.ebuild, veracrypt-1.17.ebuild, veracrypt-1.19.ebuild, veracrypt-9999.ebuild:
   Fix dependency.
 
