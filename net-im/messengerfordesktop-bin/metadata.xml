@@ -8,6 +8,6 @@
 		<description>Proxy maintainer. Assign bugs to him</description>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">Facebook-Messenger-Desktop</remote-id>
+		<remote-id type="github">messengerfordesktop-bin</remote-id>
 	</upstream>
 </pkgmetadata>
