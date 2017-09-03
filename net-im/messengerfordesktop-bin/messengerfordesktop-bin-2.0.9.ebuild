@@ -22,9 +22,8 @@ RDEPEND="
 	gnome-base/libgnome-keyring
 "
 
-PN_SRC="messengerfordesktop"
-OPT_SRC="opt/${PN_SRC}"
-OPT_DST="/opt/${PN}"
+DIR="opt"
+PACKAGE="messengerfordesktop"
 EXEFILE="messengerfordesktop"
 
 src_unpack() {
@@ -32,23 +31,22 @@ src_unpack() {
 }
 
 src_install () {
-	insinto ${OPT_DST}
-	doins -r ${OPT_SRC}/*
+	insinto /${DIR}
+	doins -r ${DIR}/*
 
 	# symbolic links
-	dosym "${OPT_DST}/${EXEFILE}" /usr/bin/${PN}
+	dosym "/${DIR}/${PACKAGE}/${EXEFILE}" /usr/bin/${PACKAGE}
 
 	# icons
 	for SIZE in 16 24 32 48 64 128 256 512;
 	do
-		newicon -s ${SIZE} usr/share/icons/hicolor/${SIZE}x${SIZE}/apps/${PN_SRC}.png ${PN}.png
+		doicon -s ${SIZE} usr/share/icons/hicolor/${SIZE}x${SIZE}/apps/${PACKAGE}.png
 	done
-	newicon usr/share/icons/hicolor/128x128/apps/${PN_SRC}.png ${PN}.png
+	doicon usr/share/icons/hicolor/128x128/apps/${PACKAGE}.png
 
 	# desktop entry
-	make_desktop_entry "${PN}" "Messenger For Desktop" "${PN}" "GNOME;GTK;Network;InstantMessaging;"
+	domenu usr/share/applications/${PACKAGE}.desktop
 
 	# change permissions
-	cd ${OPT_SRC}
-	find . -type f -perm -a=x -exec fperms a+x "${OPT_DST}/{}" \;
+	find ${DIR} -type f -perm -a=x -exec fperms a+x "/{}" \;
 }
