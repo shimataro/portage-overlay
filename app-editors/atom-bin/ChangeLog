@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  23 Nov 2017; Shimataro <shimataro@zelkova.cc> +atom-bin-1.21.2.ebuild, +atom-bin-1.22.0.ebuild, +atom-bin-1.22.1.ebuild:
+  version bump.
+
   21 Oct 2017; Shimataro <shimataro@zelkova.cc> +atom-bin-1.21.1.ebuild:
   version bump.
 
