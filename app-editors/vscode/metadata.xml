@@ -4,10 +4,10 @@
 	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>shimataro@zelkova.cc</email>
-		<name>Shimataro</name>
+		<name>shimataro</name>
 		<description>Proxy maintainer. Assign bugs to him</description>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">vscode-bin</remote-id>
+		<remote-id type="github">vscode</remote-id>
 	</upstream>
 </pkgmetadata>

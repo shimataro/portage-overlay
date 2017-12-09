@@ -1,0 +1,6 @@
+# ChangeLog for app-editors/vscode
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  09 Dec 2017; shimataro <shimataro@zelkova.cc> +vscode-1.12.0.ebuild, +vscode-1.12.1.ebuild, +vscode-1.12.2.ebuild, +vscode-1.13.0.ebuild, +vscode-1.13.1.ebuild, +vscode-1.14.0.ebuild, +vscode-1.14.1.ebuild, +vscode-1.14.2.ebuild, +vscode-1.15.0.ebuild, +vscode-1.15.1.ebuild, +vscode-1.16.0.ebuild, +vscode-1.16.1.ebuild, +vscode-1.17.0.ebuild, +vscode-1.17.1.ebuild, +vscode-1.17.2.ebuild, +vscode-1.18.0.ebuild, +vscode-1.18.1.ebuild:
+  Add new package
