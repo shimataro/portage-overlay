@@ -4,10 +4,10 @@
 
 EAPI=4
 
-inherit unpacker xdg-utils
+inherit unpacker xdg-utils eutils
 
-DESCRIPTION="Visual Studio Code"
-HOMEPAGE="https://code.visualstudio.com/"
+DESCRIPTION="A modern, open source text editor that understands web design."
+HOMEPAGE="http://brackets.io/"
 SRC_URI="
 	amd64? ( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.64-bit.deb -> ${P}-amd64.deb )
 	x86? ( https://github.com/adobe/brackets/releases/download/release-${PV}/Brackets.Release.${PV}.32-bit.deb -> ${P}-x86.deb )
@@ -30,12 +30,14 @@ src_install () {
 
 	# change permissions
 	find . -type f -perm -a=x -exec fperms a+x "/{}" \;
+
+	make_desktop_entry "/opt/brackets/brackets %U" Brackets ${PN} "Development" "MimeType=text/html;"
 }
 
-#pkg_postinst() {
-#	xdg_desktop_database_update
-#}
-#
-#pkg_postrm() {
-#	xdg_desktop_database_update
-#}
+pkg_postinst() {
+	xdg_desktop_database_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
+}
