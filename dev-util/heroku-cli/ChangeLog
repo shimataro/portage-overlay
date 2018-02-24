@@ -1,0 +1,6 @@
+# ChangeLog for dev-util/heroku-cli
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  24 Feb 2018; shimataro <shimataro@zelkova.cc> +heroku-cli-6.15.26.ebuild:
+  Add new package
