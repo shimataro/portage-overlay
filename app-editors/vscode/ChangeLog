@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  07 Apr 2018; shimataro <shimataro@zelkova.cc> +vscode-1.22.0.ebuild, +vscode-1.22.1.ebuild:
+  Version bump.
+
   18 Mar 2018; shimataro <shimataro@zelkova.cc> +vscode-1.21.0.ebuild, +vscode-1.21.1.ebuild:
   Version bump.
 
