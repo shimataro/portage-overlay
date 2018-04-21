@@ -2,6 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  22 Apr 2018; shimataro <shimataro@zelkova.cc> +heroku-cli-6.16.9.ebuild, +heroku-cli-6.16.10.ebuild, +heroku-cli-6.16.11.ebuild, +heroku-cli-6.16.12.ebuild, +heroku-cli-6.16.13.ebuild, +heroku-cli-6.16.14.ebuild, +heroku-cli-6.16.16.ebuild:
+  Version bump.
+  (6.16.15 seem not to be exist...)
+
   07 Apr 2018; shimataro <shimataro@zelkova.cc> +heroku-cli-6.16.4.ebuild, +heroku-cli-6.16.5.ebuild, +heroku-cli-6.16.6.ebuild, +heroku-cli-6.16.7.ebuild, +heroku-cli-6.16.8.ebuild:
   Version bump.
 
