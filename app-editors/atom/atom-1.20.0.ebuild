@@ -4,12 +4,12 @@
 
 EAPI=4
 
-inherit rpm xdg-utils
+inherit unpacker gnome2-utils xdg-utils
 
 DESCRIPTION="A hackable text editor for the 21st Century"
 HOMEPAGE="https://atom.io/"
 SRC_URI="
-	amd64? ( https://github.com/atom/atom/releases/download/v${PV}/${PN}.x86_64.rpm -> ${P}-amd64.rpm )
+	amd64? ( https://github.com/atom/atom/releases/download/v${PV}/${PN}-amd64.deb -> ${P}-amd64.deb )
 "
 
 LICENSE="MIT"
@@ -25,10 +25,9 @@ RDEPEND="
 S=${WORKDIR}
 
 src_install () {
-	doins -r *
-
-	# change permissions
-	find . -type f -perm -a=x -exec fperms a+x "/{}" \;
+	dodir /
+	cd "${ED}" || die
+	unpacker
 }
 
 pkg_preinst() {
