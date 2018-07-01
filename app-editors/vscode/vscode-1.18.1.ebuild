@@ -4,13 +4,13 @@
 
 EAPI=4
 
-inherit rpm xdg-utils
+inherit unpacker gnome2-utils xdg-utils
 
 DESCRIPTION="Visual Studio Code"
 HOMEPAGE="https://code.visualstudio.com/"
 SRC_URI="
-	amd64? ( https://vscode-update.azurewebsites.net/${PV}/linux-rpm-x64/stable -> ${P}-amd64.rpm )
-	x86? ( https://vscode-update.azurewebsites.net/${PV}/linux-rpm-ia32/stable -> ${P}-x86.rpm )
+	amd64? ( https://vscode-update.azurewebsites.net/${PV}/linux-deb-x64/stable -> ${P}-amd64.deb )
+	x86? ( https://vscode-update.azurewebsites.net/${PV}/linux-deb-ia32/stable -> ${P}-x86.deb )
 "
 
 LICENSE="MIT"
@@ -26,10 +26,9 @@ RDEPEND="
 S=${WORKDIR}
 
 src_install () {
-	doins -r *
-
-	# change permissions
-	find . -type f -perm -a=x -exec fperms a+x "/{}" \;
+	dodir /
+	cd "${ED}" || die
+	unpacker
 }
 
 pkg_preinst() {
