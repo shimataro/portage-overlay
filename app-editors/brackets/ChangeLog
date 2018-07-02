@@ -1,0 +1,6 @@
+# ChangeLog for app-editors/brackets
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  03 Jul 2018; shimataro <shimataro@zelkova.cc> +brackets-1.13.ebuild:
+  Add new package
