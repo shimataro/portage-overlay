@@ -2,5 +2,8 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  07 Jul 2018; shimataro <shimataro@zelkova.cc> +flat-remix-gnome-20180701.ebuild:
+  first release of ebuild package.
+
   01 Jun 2018; shimataro <shimataro@zelkova.cc> +flat-remix-gnome-20180517.ebuild:
   first release of ebuild package.
