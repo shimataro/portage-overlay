@@ -12,11 +12,11 @@ EGIT_REPO_URI="${HOMEPAGE}.git"
 SRC_URI=""
 
 EGIT_COMMIT="${PV}"
-KEYWORDS="amd64 x86"
+KEYWORDS=""
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="+wnck +X"
+IUSE="+wnck +X wayland"
 GNOME2_ECLASS_GLIB_SCHEMAS="org.valapanel.gschema.xml"
 
 DEPEND="
@@ -26,7 +26,7 @@ DEPEND="
 	>=dev-libs/glib-2.56.0
 "
 RDEPEND="${DEPEND}
-	>=x11-libs/gtk+-3.22.0:3[wayland]
+	>=x11-libs/gtk+-3.22.0:3[wayland?]
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	>=dev-libs/libpeas-1.2.0
@@ -41,11 +41,11 @@ src_prepare(){
 
 src_configure(){
 	local mycmakeargs=(
-	-DWNCK=$(usex wnck ON OFF)
-	-DX11=$(usex X ON OFF)
-	-DGSETTINGS_COMPILE=OFF
-	-DVALA_EXECUTABLE="${VALAC}"
-	-DCMAKE_INSTALL_SYSCONFDIR=/etc
+		-DWNCK=$(usex wnck ON OFF)
+		-DX11=$(usex X ON OFF)
+		-DGSETTINGS_COMPILE=OFF
+		-DVALA_EXECUTABLE="${VALAC}"
+		-DCMAKE_INSTALL_SYSCONFDIR=/etc
 	)
 	cmake-utils_src_configure
 }
