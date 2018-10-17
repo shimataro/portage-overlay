@@ -4,3 +4,6 @@
 *.tmp
 *.swp
 *~
+
+# patch files
+*.patch
