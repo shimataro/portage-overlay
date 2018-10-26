@@ -1,0 +1,6 @@
+# ChangeLog for app-misc/boostnote
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  26 Oct 2017; shimataro <shimataro@zelkova.cc> +boostnote-0.11.10.ebuild:
+  Add new package
