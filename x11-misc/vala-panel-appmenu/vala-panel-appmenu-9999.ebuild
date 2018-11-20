@@ -5,28 +5,28 @@ EAPI=6
 
 VALA_MIN_API_VERSION=0.24
 
-inherit cmake-utils eutils gnome2-utils git-r3 vala
+inherit git-r3 vala cmake-utils eutils gnome2-utils
 
-DESCRIPTION="Global Menu plugin for xfce4 and vala-panel"
+DESCRIPTION="Global Menu for Vala Panel (and xfce4-panel and mate-panel)"
 HOMEPAGE="https://github.com/rilian-la-te/vala-panel-appmenu"
 SRC_URI=""
-EGIT_REPO_URI="${HOMEPAGE}.git"
 
-KEYWORDS=""
+EGIT_REPO_URI="${HOMEPAGE}.git"
 EGIT_COMMIT="${PV}"
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="+vala-panel xfce +wnck mate wayland"
-REQUIRED_USE="|| ( xfce vala-panel mate )"
+KEYWORDS=""
+IUSE="-vala-panel xfce mate +wnck jayatana"
+REQUIRED_USE="|| ( vala-panel xfce mate )"
 
 DEPEND="
-	>=x11-libs/gtk+-3.22.0:3[wayland?]
 	$(vala_depend)
-	virtual/pkgconfig
+	>=x11-libs/gtk+-3.22.0:3
 	sys-devel/gettext
 "
-RDEPEND="${DEPEND}
+RDEPEND="
+	${DEPEND}
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	>=x11-libs/bamf-0.5.0
@@ -36,38 +36,25 @@ RDEPEND="${DEPEND}
 	mate? ( >=mate-base/mate-panel-1.20.0 )
 "
 
-src_prepare(){
-	if use !wayland; then
-		sed -i 's/WAYLAND//' CMakeLists.txt
-		sed -i 's/WAYLAND//' subprojects/appmenu-gtk-module/CMakeLists.txt
-		sed -i 's/\${WAYLAND_INCLUDE}//'  subprojects/appmenu-gtk-module/src/CMakeLists.txt
-	fi
-	vala_src_prepare
-	cmake-utils_src_prepare
-}
-
-src_configure(){
-	local mycmakeargs=(
-		-DENABLE_XFCE=$(usex xfce ON OFF)
-		-DENABLE_VALAPANEL=$(usex vala-panel ON OFF)
-		-DENABLE_WNCK=$(usex wnck ON OFF)
-		-DENABLE_MATE=$(usex mate ON OFF)
-		-DENABLE_APPMENU_GTK_MODULE=ON
-		-DGSETTINGS_COMPILE=OFF
-	)
+src_configure() {
+	cmake-utils_use_enable XFCE xfce
+	cmake-utils_use_enable VALAPANEL vala-panel
+	cmake-utils_use_enable MATE mate
+	cmake-utils_use_enable JAYATANA jayatana
+	cmake-utils_use_enable APPMENU_GTK_MODULE
 	cmake-utils_src_configure
 }
 
-pkg_preinst(){
+pkg_preinst() {
 	gnome2_schemas_savelist
 }
 
-pkg_postinst(){
+pkg_postinst() {
 	gnome2_gconf_install
 	gnome2_schemas_update
 }
 
-pkg_postrm(){
+pkg_postrm() {
 	gnome2_gconf_uninstall
 	gnome2_schemas_update
 }
