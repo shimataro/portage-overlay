@@ -54,6 +54,17 @@ pkg_preinst() {
 pkg_postinst() {
 	gnome2_gconf_install
 	gnome2_schemas_update
+
+	if use xfce; then
+		elog "type the following lines into yor console:"
+		elog "    xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true"
+		elog "    xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true"
+	fi
+	if use mate; then
+		elog "type the following lines into yor console:"
+		elog "    gsettings set org.mate.interface gtk-shell-shows-app-menu true"
+		elog "    gsettings set org.mate.interface gtk-shell-shows-menubar true"
+	fi
 }
 
 pkg_postrm() {
