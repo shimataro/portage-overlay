@@ -7,3 +7,5 @@
 
 # patch files
 *.patch
+*.orig
+*.rej
