@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  22 Nov 2018; shimataro <shimataro@zelkova.cc> vala-panel-appmenu-0.7.1.ebuild, vala-panel-appmenu-9999.ebuild:
+  update configure methods.
+
   21 Nov 2018; shimataro <shimataro@zelkova.cc> vala-panel-appmenu-0.7.1.ebuild, vala-panel-appmenu-9999.ebuild:
   update build methods.
 

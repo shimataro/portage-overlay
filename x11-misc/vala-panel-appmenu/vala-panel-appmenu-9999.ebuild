@@ -37,11 +37,13 @@ RDEPEND="
 "
 
 src_configure() {
-	cmake-utils_use_enable XFCE xfce
-	cmake-utils_use_enable VALAPANEL vala-panel
-	cmake-utils_use_enable MATE mate
-	cmake-utils_use_enable JAYATANA jayatana
-	cmake-utils_use_enable APPMENU_GTK_MODULE
+	local mycmakeargs=(
+		$(cmake-utils_use_enable xfce XFCE)
+		$(cmake-utils_use_enable vala-panel VALAPANEL)
+		$(cmake-utils_use_enable mate MATE)
+		$(cmake-utils_use_enable jayatana JAYATANA)
+		-DENABLE_APPMENU_GTK_MODULE=ON
+	)
 	cmake-utils_src_configure
 }
 
