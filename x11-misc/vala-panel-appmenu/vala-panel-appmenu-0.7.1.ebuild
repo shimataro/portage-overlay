@@ -17,12 +17,12 @@ EGIT_COMMIT="${PV}"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE="-vala-panel xfce mate +wnck jayatana"
+IUSE="-vala-panel xfce mate +wnck jayatana -wayland"
 REQUIRED_USE="|| ( vala-panel xfce mate )"
 
 DEPEND="
 	$(vala_depend)
-	>=x11-libs/gtk+-3.22.0:3
+	>=x11-libs/gtk+-3.22.0:3[wayland?]
 	sys-devel/gettext
 "
 RDEPEND="
@@ -36,13 +36,25 @@ RDEPEND="
 	mate? ( >=mate-base/mate-panel-1.20.0 )
 "
 
+src_prepare() {
+	if use !wayland; then
+		sed -i 's/WAYLAND//' CMakeLists.txt
+		sed -i 's/WAYLAND//' subprojects/appmenu-gtk-module/CMakeLists.txt
+		sed -i 's/\${WAYLAND_INCLUDE}//'  subprojects/appmenu-gtk-module/src/CMakeLists.txt
+	fi
+
+	vala_src_prepare
+	cmake-utils_src_prepare
+}
+
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_enable xfce XFCE)
-		$(cmake-utils_use_enable vala-panel VALAPANEL)
-		$(cmake-utils_use_enable mate MATE)
-		$(cmake-utils_use_enable jayatana JAYATANA)
+		-DENABLE_XFCE=$(usex xfce ON OFF)
+		-DENABLE_VALAPANEL=$(usex vala-panel ON OFF)
+		-DENABLE_MATE=$(usex mate ON OFF)
+		-DENABLE_JAYATANA=$(usex jayatana ON OFF)
 		-DENABLE_APPMENU_GTK_MODULE=ON
+		-DGSETTINGS_COMPILE=OFF
 	)
 	cmake-utils_src_configure
 }
@@ -55,15 +67,23 @@ pkg_postinst() {
 	gnome2_gconf_install
 	gnome2_schemas_update
 
+	elog "for GTK+2; add the following lines into /etc/gtk-2.0/gtkrc:"
+	elog "  gtk-modules=\"appmenu-gtk-module\""
+	elog
+	elog "for GTK+3; add the following lines into /etc/gtk-3.0/settings.ini:"
+	elog "  [Settings]"
+	elog "  gtk-modules=\"appmenu-gtk-module\""
+	elog
+
 	if use xfce; then
 		elog "type the following lines into yor console:"
-		elog "    xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true"
-		elog "    xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true"
+		elog "  xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true"
+		elog "  xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true"
 	fi
 	if use mate; then
 		elog "type the following lines into yor console:"
-		elog "    gsettings set org.mate.interface gtk-shell-shows-app-menu true"
-		elog "    gsettings set org.mate.interface gtk-shell-shows-menubar true"
+		elog "  gsettings set org.mate.interface gtk-shell-shows-app-menu true"
+		elog "  gsettings set org.mate.interface gtk-shell-shows-menubar true"
 	fi
 }
 
