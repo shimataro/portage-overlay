@@ -2,5 +2,8 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  22 Nov 2018; shimataro <shimataro@zelkova.cc> +source-han-sans-2.000.ebuild:
+  version bump.
+
   10 May 2018; shimataro <shimataro@zelkova.cc> +source-han-sans-1.001.ebuild, +source-han-sans-1.002.ebuild, +source-han-sans-1.003.ebuild, +source-han-sans-1.004.ebuild:
   first release of ebuild package.
