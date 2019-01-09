@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  09 Jan 2019; shimataro <shimataro@zelkova.cc> +atom-1.34.0.ebuild:
+  Version bump.
+
   20 Dec 2018; shimataro <shimataro@zelkova.cc> +atom-1.33.1.ebuild:
   Version bump.
 
