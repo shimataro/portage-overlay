@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  29 Jan 2019; Shimataro <shimataro@zelkova.cc> +networkmanager-l2tp-1.0.10.ebuild:
+  version bump.
+
   21 Mar 2018; Shimataro <shimataro@zelkova.cc> +networkmanager-l2tp-1.2.10.ebuild:
   version bump.
 
