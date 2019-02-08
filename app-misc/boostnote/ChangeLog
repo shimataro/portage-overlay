@@ -2,7 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
-  26 Dec 2019; shimataro <shimataro@zelkova.cc> +boostnote-0.11.13.ebuild:
+  09 Feb 2019; shimataro <shimataro@zelkova.cc> +boostnote-0.11.14.ebuild, +boostnote-0.11.15.ebuild:
+  version bump.
+
+  26 Jan 2019; shimataro <shimataro@zelkova.cc> +boostnote-0.11.13.ebuild:
   version bump.
 
   17 Dec 2018; shimataro <shimataro@zelkova.cc> +boostnote-0.11.12.ebuild:
