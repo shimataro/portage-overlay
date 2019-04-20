@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  20 Apr 2019; shimataro <shimataro@zelkova.cc> +flat-remix-gtk-20190409.ebuild, +flat-remix-gtk-20190414.ebuild:
+  Version bump.
+
   20 Apr 2019; shimataro <shimataro@zelkova.cc> flat-remix-gtk-20190321.ebuild, flat-remix-gtk-20190327.ebuild, flat-remix-gtk-20190328.ebuild, flat-remix-gtk-20190404.ebuild, flat-remix-gtk-20190405.ebuild, flat-remix-gtk-99999999.ebuild:
   Fix submodule error
 
