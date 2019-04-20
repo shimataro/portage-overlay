@@ -13,6 +13,7 @@ AUTHOR="daniruiz"
 
 EGIT_REPO_URI="https://github.com/${AUTHOR}/${PN}.git"
 EGIT_COMMIT="${PV}"
+EGIT_SUBMODULES=(-aur)
 
 LICENSE="GPL-3"
 SLOT="0"
