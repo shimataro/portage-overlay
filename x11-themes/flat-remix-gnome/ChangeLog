@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  25 May 2019; shimataro <shimataro@zelkova.cc> +flat-remix-gnome-20190521.ebuild:
+  Version bump.
+
   14 May 2019; shimataro <shimataro@zelkova.cc> +flat-remix-gnome-20190514.ebuild:
   Version bump.
 
