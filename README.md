@@ -1,9 +1,8 @@
-portage-overlay
-===============
+# portage-overlay
 
 personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
 
-# Included packages
+## Included packages
 
 | package | name | description | note |
 |---------|------|-------------|------|
@@ -22,20 +21,23 @@ personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
 | `x11-themes/mbuntu-themes` | [MBuntu-themes](https://launchpad.net/~noobslab/+archive/ubuntu/themes) | MBuntu themes | OSX-like themes |
 | `x11-themes/OSX-MATE` | [OSX-MATE](https://github.com/rohithmadhavan/OSX-MATE) | OSX-MATE theme - Based on Radiant-MATE | requires `x11-themes/mate-icon-theme-faenza` |
 
-# How to use
+## How to use
 
 1. Delete below code in `/etc/portage/make.conf`
 
-
+    ```conf
     PORTDIR="..."
+    ```
 
-2. Copy `shimataro.conf` to `/etc/portage/repos.conf`
+1. Copy `shimataro.conf` to `/etc/portage/repos.conf`
 (create if directory doesn't exist)
 
-# How to build manifest file
+## How to build manifest file
 
-    $ ebuild path/to/ebuild digest
+```bash
+ebuild path/to/ebuild digest
+```
 
-# Project page
+## Project page
 
-https://github.com/shimataro/portage-overlay
+<https://github.com/shimataro/portage-overlay>
