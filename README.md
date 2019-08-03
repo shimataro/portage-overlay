@@ -29,7 +29,7 @@ personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
     PORTDIR="..."
     ```
 
-1. Copy `shimataro.conf` to `/etc/portage/repos.conf`
+1. Copy [`shimataro.conf`](./shimataro.conf) to `/etc/portage/repos.conf/`
 (create if directory doesn't exist)
 
 ## How to build manifest file
