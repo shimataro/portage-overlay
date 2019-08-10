@@ -1,9 +1,0 @@
-# ChangeLog for x11-themes/arc-icon-theme
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
-# $Header: $
-
-  26 Nov 2016; Shimataro <shimataro@zelkova.cc> +arc-icon-theme-20161122.ebuild:
-  Version bump.
-
-  08 Jun 2016; Shimataro <shimataro@zelkova.cc> +arc-icon-theme-20160605.ebuild, +arc-icon-theme-9999.ebuild, +metadata.xml:
-  first release of ebuild package.
