@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/boostnote
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# Copyright 1999-2019 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
+
+  19 Oct 2019; shimataro <shimataro@zelkova.cc> +boostnote-0.13.0.ebuild:
+  version bump.
 
   09 Jul 2019; shimataro <shimataro@zelkova.cc> +boostnote-0.11.16.ebuild, +boostnote-0.11.17.ebuild, +boostnote-0.12.1.ebuild:
   version bump.
