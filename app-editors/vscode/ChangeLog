@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vscode
-# Copyright 1999-2019 Gentoo Foundation; Distributed under the GPL v3
+# Copyright 1999-2020 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
+
+  09 Feb 2020; shimataro <shimataro@zelkova.cc> +vscode-1.42.0.ebuild:
+  Version bump.
 
   20 Dec 2019; shimataro <shimataro@zelkova.cc> +vscode-1.41.1.ebuild:
   Version bump.
