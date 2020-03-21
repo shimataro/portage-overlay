@@ -2,6 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
+# To check if there's a new version available:
+# curl -so- https://apt.enpass.io/dists/stable/main/binary-amd64/Packages.gz | zegrep "Package|Version|Depends" | head -n 3
+
 EAPI=4
 
 inherit unpacker gnome2-utils xdg-utils
@@ -36,9 +39,11 @@ pkg_preinst() {
 pkg_postinst() {
 	gnome2_icon_cache_update
 	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }
 
 pkg_postrm() {
 	gnome2_icon_cache_update
 	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }
