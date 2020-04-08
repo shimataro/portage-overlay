@@ -2,6 +2,9 @@
 # Copyright 1999-2020 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  08 Apr 2020; shimataro <shimataro@zelkova.cc> +enpass-6.4.1.643.ebuild:
+  Version bump.
+
   21 Mar 2020; shimataro <shimataro@zelkova.cc> enpass-6.4.0.631.ebuild:
   Update process in "postinst" and "postrm"
 
