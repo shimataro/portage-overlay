@@ -1,0 +1,6 @@
+# ChangeLog for x11-themes/yaru
+# Copyright 1999-2020 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  10 May 2020; shimataro <shimataro@zelkova.cc> +yaru-20.04.6.ebuild:
+  first release of ebuild package.
