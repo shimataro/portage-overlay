@@ -21,7 +21,7 @@ IUSE=""
 RDEPEND="
 	x11-libs/libXScrnSaver
 	sys-process/lsof
-	net-misc/curl
+	net-misc/curl[adns]
 "
 
 S=${WORKDIR}
