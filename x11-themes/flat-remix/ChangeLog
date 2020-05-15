@@ -2,6 +2,9 @@
 # Copyright 1999-2020 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  15 May 2020; shimataro <shimataro@zelkova.cc> +flat-remix-20200511.ebuild:
+  Version bump.
+
   15 Apr 2020; shimataro <shimataro@zelkova.cc> +flat-remix-20200414.ebuild:
   Version bump.
 
