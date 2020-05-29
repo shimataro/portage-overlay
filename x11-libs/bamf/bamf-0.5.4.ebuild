@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,17 +8,15 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 VALA_MIN_API_VERSION=0.20
 VALA_USE_DEPEND=vapigen
 
-inherit vala autotools-utils python-r1 git-r3
-
-EGIT_REPO_URI="https://git.launchpad.net/${PN}"
-EGIT_COMMIT="${PV}"
+inherit vala autotools-utils python-r1
 
 DESCRIPTION="BAMF Application Matching Framework"
 HOMEPAGE="https://launchpad.net/bamf"
+SRC_URI="http://launchpad.net/${PN}/0.5/${PV}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64 x86"
 IUSE="+introspection doc static-libs"
 
 RDEPEND="
@@ -38,12 +36,10 @@ DEPEND="${RDEPEND}
 	introspection? ( dev-libs/gobject-introspection )
 	virtual/pkgconfig"
 
-AUTOTOOLS_AUTORECONF=yes
-DOCS=(AUTHORS COPYING COPYING.LGPL COPYING.LGPL-2.1 ChangeLog NEWS README TODO)
+DOCS=(AUTHORS COPYING COPYING.LGPL ChangeLog NEWS README TODO)
 
 src_prepare() {
-	sed -i 's/-Werror//' configure.ac
-	sed -i 's/tests//' Makefile.am
+	sed -i 's/-Werror//' configure
 
 	autotools-utils_src_prepare
 	vala_src_prepare
