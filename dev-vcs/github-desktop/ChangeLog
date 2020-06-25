@@ -2,6 +2,9 @@
 # Copyright 1999-2020 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  25 Jun 2020; shimataro <shimataro@zelkova.cc> +github-desktop-2.5.3_rc1.ebuild:
+  Version bump.
+
   05 Jun 2020; shimataro <shimataro@zelkova.cc> +github-desktop-2.5.2_rc1.ebuild:
   Version bump.
 
