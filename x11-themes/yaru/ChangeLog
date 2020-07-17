@@ -2,6 +2,9 @@
 # Copyright 1999-2020 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  18 Jul 2020; shimataro <shimataro@zelkova.cc> +yaru-20.10.2.ebuild:
+  Version bump.
+
   30 Jun 2020; shimataro <shimataro@zelkova.cc> +yaru-20.04.7.ebuild, +yaru-20.10.1.ebuild:
   Version bump.
 
