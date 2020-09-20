@@ -8,3 +8,5 @@
 # patch files
 *.orig
 *.rej
+
+_.patch
