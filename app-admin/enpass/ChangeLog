@@ -2,8 +2,11 @@
 # Copyright 1999-2020 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
-  09 Sep 2020; shimataro <shimataro@zelkova.cc> enpass-6.5.0.707.ebuild:
-  Fix crash.
+  14 Oct 2020; shimataro <shimataro@zelkova.cc> +enpass-6.5.1.723.ebuild:
+  Version bump.
+
+  09 Sep 2020; shimataro <shimataro@zelkova.cc> +enpass-6.5.0.707.ebuild:
+  Version bump.
 
   12 May 2020; shimataro <shimataro@zelkova.cc> enpass-6.4.0.631.ebuild, enpass-6.4.1.643.ebuild:
   Fix crash.
