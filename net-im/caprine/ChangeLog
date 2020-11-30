@@ -2,6 +2,9 @@
 # Copyright 1999-2020 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  29 Nov 2020; shimataro <shimataro@zelkova.cc> +caprine-2.51.2.ebuild:
+  version bump.
+
   17 Nov 2020; shimataro <shimataro@zelkova.cc> +caprine-2.51.1.ebuild:
   version bump.
 
