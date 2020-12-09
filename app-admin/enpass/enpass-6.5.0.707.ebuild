@@ -5,7 +5,7 @@
 # To check if there's a new version available:
 # curl -so- https://apt.enpass.io/dists/stable/main/binary-amd64/Packages.gz | zegrep "Package|Version|Depends" | head -n 3
 
-EAPI=4
+EAPI=5
 
 inherit unpacker gnome2-utils xdg-utils
 
