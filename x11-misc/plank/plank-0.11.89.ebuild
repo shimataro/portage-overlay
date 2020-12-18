@@ -7,7 +7,7 @@ EAPI=5
 VALA_MIN_API_VERSION=0.24
 VALA_USE_DEPEND=vapigen
 
-inherit fdo-mime gnome2-utils vala autotools-utils
+inherit xdg-utils gnome2-utils vala autotools-utils
 
 DESCRIPTION="The dock for elementary Pantheon, stupidly simple"
 HOMEPAGE="https://launchpad.net/plank"
@@ -62,13 +62,13 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	fdo-mime_desktop_database_update
+	xdg_desktop_database_update
 	gnome2_icon_cache_update
 
 	glib-compile-schemas /usr/share/glib-2.0/schemas
 }
 
 pkg_postrm() {
-	fdo-mime_desktop_database_update
+	xdg_desktop_database_update
 	gnome2_icon_cache_update
 }
