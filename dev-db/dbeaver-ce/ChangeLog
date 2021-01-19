@@ -2,6 +2,9 @@
 # Copyright 1999-2021 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  18 Jan 2021; shimataro <shimataro@zelkova.cc> +dbeaver-ce-7.3.3.ebuild:
+  Version bump.
+
   07 Jan 2021; shimataro <shimataro@zelkova.cc> +dbeaver-ce-7.3.2.ebuild:
   Version bump.
 
