@@ -1,14 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python{2_7,3_7} )
 VALA_MIN_API_VERSION=0.20
 VALA_USE_DEPEND=vapigen
 
-inherit vala autotools-utils python-r1 git-r3
+inherit vala autotools-utils python-any-r1 git-r3
 
 EGIT_REPO_URI="https://git.launchpad.net/${PN}"
 EGIT_COMMIT="${PV}"
@@ -32,8 +32,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	$(vala_depend)
 	${PYTHON_DEPS}
-	dev-libs/libxml2[python]
-	dev-libs/libxslt[python]
+	dev-python/lxml
 	doc? ( dev-util/gtk-doc )
 	introspection? ( dev-libs/gobject-introspection )
 	virtual/pkgconfig"
@@ -43,7 +42,6 @@ DOCS=(AUTHORS COPYING COPYING.LGPL COPYING.LGPL-2.1 ChangeLog NEWS README TODO)
 
 src_prepare() {
 	sed -i 's/-Werror//' configure.ac
-	sed -i 's/tests//' Makefile.am
 
 	autotools-utils_src_prepare
 	vala_src_prepare
@@ -52,7 +50,6 @@ src_prepare() {
 src_configure() {
 	local myeconfargs=(
 		--disable-gtktest
-		--disable-webapps
 		$(use_enable doc gtk-doc)
 		$(use_enable introspection)
 		VALA_API_GEN="${VAPIGEN}"
