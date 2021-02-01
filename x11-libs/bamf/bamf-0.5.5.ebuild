@@ -8,11 +8,13 @@ PYTHON_COMPAT=( python{2_7,3_7} )
 VALA_MIN_API_VERSION=0.20
 VALA_USE_DEPEND=vapigen
 
-inherit vala autotools-utils python-any-r1
+inherit vala autotools-utils python-any-r1 git-r3
+
+EGIT_REPO_URI="https://git.launchpad.net/${PN}"
+EGIT_COMMIT="${PV}"
 
 DESCRIPTION="BAMF Application Matching Framework"
 HOMEPAGE="https://launchpad.net/bamf"
-SRC_URI="http://launchpad.net/${PN}/0.5/${PV}/+download/${P}.tar.xz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -36,7 +38,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 AUTOTOOLS_AUTORECONF=yes
-DOCS=(AUTHORS COPYING COPYING.LGPL ChangeLog NEWS README TODO)
+DOCS=(AUTHORS COPYING COPYING.LGPL COPYING.LGPL-2.1 ChangeLog NEWS README TODO)
 
 src_prepare() {
 	sed -i 's/-Werror//' configure.ac
