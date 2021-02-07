@@ -2,9 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer type="person">
-    <email>graaff@gentoo.org</email>
+    <email>shimataro@zelkova.cc</email>
+    <name>shimataro</name>
+    <description>Proxy maintainer. Assign bugs to him</description>
   </maintainer>
   <upstream>
-    <remote-id type="github">antlr/website-antlr3</remote-id>
+    <remote-id type="mysql">mysql-workbench</remote-id>
   </upstream>
 </pkgmetadata>
