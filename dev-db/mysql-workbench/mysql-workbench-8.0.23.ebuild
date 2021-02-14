@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 GCONF_DEBUG="no"
 
 PYTHON_COMPAT=( python3_8 )
@@ -9,15 +9,15 @@ PYTHON_REQ_USE="sqlite"
 
 ANTLR_VERSION=4.7.1
 
-inherit gnome2 flag-o-matic python-single-r1 cmake-utils
+inherit flag-o-matic git-r3 gnome2 python-single-r1 cmake-utils
 
-MY_P="${PN}-community-${PV}-src"
-
-DESCRIPTION="MySQL Workbench"
+DESCRIPTION="MySQL Workbench is a unified visual tool for database architects, developers, and DBAs."
 HOMEPAGE="https://www.mysql.com/products/workbench/"
-SRC_URI="
-	https://cdn.mysql.com/Downloads/MySQLGUITools/${MY_P}.tar.gz -> ${P}.tar.gz
-	https://www.antlr.org/download/antlr-${ANTLR_VERSION}-complete.jar"
+SRC_URI="https://www.antlr.org/download/antlr-${ANTLR_VERSION}-complete.jar"
+AUTHOR="mysql"
+
+EGIT_REPO_URI="https://github.com/${AUTHOR}/${PN}.git"
+EGIT_COMMIT="${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -43,8 +43,8 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 #find_package(LibSSH 0.8.5 REQUIRED)
 #find_package(OpenSSL REQUIRED)
 #find_package(Rapidjson 1.1.0 REQUIRED)
-#find_package(IODBC)
-#find_package(UNIXODBC)
+#  find_package(IODBC)
+#  find_package(UNIXODBC)
 #pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 #pkg_check_modules(GTKMM REQUIRED gtkmm-3.0)
 #pkg_check_modules(GTHREAD REQUIRED gthread-2.0)
@@ -54,7 +54,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 #pkg_check_modules(CAIRO REQUIRED cairo>=1.5.12)
 #pkg_check_modules(UUID REQUIRED uuid)
 #pkg_check_modules(LIBZIP REQUIRED libzip)
-#pkg_check_modules(LIBSECRET REQUIRED libsecret-1)
+#  pkg_check_modules(LIBSECRET REQUIRED libsecret-1)
 CDEPEND="${PYTHON_DEPS}
 	>=dev-libs/libxml2-2.7.4:2
 	virtual/opengl
@@ -104,31 +104,27 @@ DEPEND="${CDEPEND}
 	dev-lang/swig
 "
 
-S="${WORKDIR}"/"${MY_P}"
-
 src_prepare() {
-	## package is very fragile...
-	strip-flags
+	cp build/mysql-workbench-community.mime           build/mysql-workbench-commercial.mime
+	cp build/mysql-workbench-community.sharedmimeinfo build/mysql-workbench-commercial.sharedmimeinfo
 
 	cmake-utils_src_prepare
 }
 
 src_configure() {
-	if has_version dev-db/libiodbc ; then
-		IODBC="-DIODBC_CONFIG_PATH=/usr/bin/iodbc-config"
-	fi
-
-#	filter-flags -Werror
 	append-cxxflags -std=c++11 -lssh
-	ANTLR_JAR_PATH="${DISTDIR}/antlr-${ANTLR_VERSION}-complete.jar"
+
 	local mycmakeargs=(
-		-DWITH_ANTLR_JAR=${ANTLR_JAR_PATH}
+		-DWITH_ANTLR_JAR="${DISTDIR}/antlr-${ANTLR_VERSION}-complete.jar"
 		-DLIB_INSTALL_DIR="/usr/$(get_libdir)"
 		-DIODBC_INCLUDE_PATH="/usr/include/iodbc"
-		${IODBC}
 		-DPYTHON_INCLUDE_DIR="$(python_get_includedir)"
 		-DPYTHON_LIBRARY="$(python_get_library_path)"
 		-DMySQL_CONFIG_PATH="/usr/bin/mysql_config"
 	)
+	if has_version dev-db/libiodbc ; then
+		mycmakeargs+=( -DIODBC_CONFIG_PATH="/usr/bin/iodbc-config" )
+	fi
+
 	cmake-utils_src_configure
 }
