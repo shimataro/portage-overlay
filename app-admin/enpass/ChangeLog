@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/enpass
-# Copyright 1999-2020 Gentoo Foundation; Distributed under the GPL v3
+# Copyright 1999-2021 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
+
+  20 Feb 2021; shimataro <shimataro@zelkova.cc> +enpass-6.6.0.775.ebuild:
+  Version bump.
 
   14 Oct 2020; shimataro <shimataro@zelkova.cc> +enpass-6.5.1.723.ebuild:
   Version bump.
