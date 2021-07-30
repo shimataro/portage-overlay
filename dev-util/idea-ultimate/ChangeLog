@@ -2,6 +2,9 @@
 # Copyright 1999-2021 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  30 Jul 2021; shimataro <shimataro@zelkova.cc> +idea-ultimate-2021.1.ebuild, +idea-ultimate-2021.1.1.ebuild, +idea-ultimate-2021.1.2.ebuild, +idea-ultimate-2021.1.3.ebuild, +idea-ultimate-2021.2.ebuild:
+  Version bump.
+
   26 Mar 2021; shimataro <shimataro@zelkova.cc> +idea-ultimate-2020.3.3.ebuild:
   Version bump.
 
