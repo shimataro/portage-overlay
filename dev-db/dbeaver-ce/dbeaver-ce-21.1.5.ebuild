@@ -28,7 +28,8 @@ src_install () {
 
 	# create desktop entry
 	mkdir ${WORKDIR}/applications
-	cp -r ${WORKDIR}/dbeaver/dbeaver.desktop ${WORKDIR}/applications
+	mv ${WORKDIR}/dbeaver ${WORKDIR}/dbeaver-ce
+	cp -r ${WORKDIR}/dbeaver-ce/dbeaver-ce.desktop ${WORKDIR}/applications
 
 	insinto ${TARGET}
 	doins -r ${WORKDIR}/*
