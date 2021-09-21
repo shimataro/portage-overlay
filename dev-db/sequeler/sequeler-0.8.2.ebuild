@@ -15,7 +15,7 @@ EGIT_COMMIT="v${PV}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE=""
+IUSE="+mysql +postgres"
 REQUIRED_USE=""
 
 CDEPEND="
@@ -24,7 +24,7 @@ CDEPEND="
 	dev-libs/glib:2
 	dev-libs/libgee:0.8
 	dev-libs/libxml2
-	gnome-extra/libgda:5/4
+	gnome-extra/libgda:5/4[mysql?,postgres?]
 	x11-libs/gtksourceview:3.0
 	app-crypt/libsecret
 	net-libs/libssh2
