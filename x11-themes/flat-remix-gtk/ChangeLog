@@ -2,6 +2,9 @@
 # Copyright 1999-2020 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  12 Oct 2021; shimataro <shimataro@zelkova.cc> -flat-remix-gtk-20180527.ebuild, -flat-remix-gtk-20180701.ebuild, -flat-remix-gtk-20181004.ebuild, -flat-remix-gtk-20181007.ebuild, -flat-remix-gtk-20181008.ebuild, -flat-remix-gtk-20181013.ebuild, -flat-remix-gtk-20181016.ebuild, -flat-remix-gtk-20181023.ebuild, -flat-remix-gtk-20181126.ebuild, -flat-remix-gtk-20181204.ebuild, -flat-remix-gtk-20190109.ebuild, -flat-remix-gtk-20190224.ebuild, -flat-remix-gtk-20190302.ebuild, -flat-remix-gtk-20190321.ebuild, -flat-remix-gtk-20190327.ebuild, -flat-remix-gtk-20190328.ebuild, -flat-remix-gtk-20190404.ebuild, -flat-remix-gtk-20190405.ebuild, -flat-remix-gtk-20190409.ebuild, -flat-remix-gtk-20190414.ebuild, -flat-remix-gtk-20190425.ebuild, -flat-remix-gtk-20190503.ebuild, -flat-remix-gtk-20190510.ebuild, -flat-remix-gtk-20190519.ebuild, -flat-remix-gtk-20190526.ebuild, -flat-remix-gtk-20190604.ebuild, -flat-remix-gtk-20190613.ebuild, -flat-remix-gtk-20190622.ebuild, -flat-remix-gtk-20190718.ebuild:
+  Drop old versions.
+
   12 Oct 2021; shimataro <shimataro@zelkova.cc> +flat-remix-gtk-20211010.ebuild:
   Version bump.
 
