@@ -2,6 +2,9 @@
 # Copyright 1999-2021 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  15 Dec 2021; shimataro <shimataro@zelkova.cc> -yaru-20.04.6.ebuild, -yaru-20.04.7.ebuild, -yaru-20.04.8.ebuild, -yaru-20.10.1.ebuild, -yaru-20.10.2.ebuild, +yaru-20.04.11.ebuild, +yaru-20.10.6.1.ebuild:
+  Drop old files.
+
   15 Dec 2021; shimataro <shimataro@zelkova.cc> +yaru-21.04.1.ebuild, +yaru-21.10.2.ebuild:
   Version bump.
 
