@@ -4,10 +4,10 @@ personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
 
 ## Included packages
 
-| package | name | description | generates native code? |
+| package | name | description | generates native code |
 |---------|------|-------------|------|
 | `app-admin/enpass` | [Enpass](https://www.enpass.io/) | Password Manager | |
-| `app-editor/code` | [Code](https://github.com/elementary/code) | Code editor designed for elementary OS | ✔ |
+| `app-editors/code` | [Code](https://github.com/elementary/code) | Code editor designed for elementary OS | ✔ |
 | `dev-db/dbeaver-ce` | [DBeaver Community](https://dbeaver.io/) | Universal Database Tool | |
 | `dev-db/sequeler` | [Sequeler](https://github.com/Alecaddd/sequeler) | SQL Client built in Vala | ✔ |
 | `dev-util/idea-ultimate` | [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) | Capable and Ergonomic IDE for JVM | |
