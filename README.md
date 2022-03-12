@@ -4,24 +4,26 @@ personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
 
 ## Included packages
 
-| package | name | description | note |
+| package | name | description | generates native code? |
 |---------|------|-------------|------|
-| `app-crypt/veracrypt` | [VeraCrypt](https://veracrypt.codeplex.com/) | An open source disk encryption tool with strong security for the Paranoid | |
-| `app-editor/atom` | [Atom](https://atom.io/) | A hackable text editor for the 21st Century | |
-| `app-editor/vscode` | [Visual Studio Code](https://code.visualstudio.com/) | Code Editing. Redefined. | |
-| `mate-extra/topmenu-gtk` | [topmenu-gtk](https://git.javispedro.com/cgit/topmenu-gtk.git/about/) | A Gtk+ module and Mate/Xfce panel applets for a global menubar. | |
+| `app-admin/enpass` | [Enpass](https://www.enpass.io/) | Password Manager | |
+| `app-editor/code` | [Code](https://github.com/elementary/code) | Code editor designed for elementary OS | ✔ |
+| `dev-db/dbeaver-ce` | [DBeaver Community](https://dbeaver.io/) | Universal Database Tool | |
+| `dev-db/sequeler` | [Sequeler](https://github.com/Alecaddd/sequeler) | SQL Client built in Vala | ✔ |
+| `dev-util/idea-ultimate` | [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) | Capable and Ergonomic IDE for JVM | |
+| `dev-vcs/github-desktop` | [GitHub Desktop (unofficial)](https://github.com/shiftkey/desktop) | Fork of GitHub Desktop to support various Linux distributions | |
+| `media-fonts/source-han-code-jp` | [Source Han Code JP](https://github.com/adobe-fonts/source-han-code-jp) | Source Han Code JP | 源ノ角ゴシック | |
+| `media-fonts/source-han-serif` | [Source Han Serif](https://github.com/adobe-fonts/source-han-serif) | Source Han Serif | 源ノ明朝 | |
 | `net-im/caprine` | [Caprine](https://sindresorhus.com/caprine/) | Elegant Facebook Messenger desktop app | |
-| `www-misc/webtaku` | [webtaku](https://github.com/shimataro/webtaku) | webpage snapshot image generator | |
-| `x11-misc/plank` | [Plank](https://launchpad.net/plank) | The dock for elementary Pantheon, stupidly simple | |
-| `x11-misc/vala-panel-appmenu` | [vala-panel-appmenu](https://github.com/rilian-la-te/vala-panel-appmenu) | Global Menu for Vala Panel (and xfce4-panel and mate-panel) | |
+| `www-misc/webtaku` | [webtaku](https://github.com/shimataro/webtaku) | webpage snapshot image generator | ✔ |
+| `x11-libs/bamf` | [BAMF](https://launchpad.net/bamf) | Removes the headache of applications matching into a simple DBus daemon and c wrapper library | ✔ |
+| `x11-misc/plank` | [Plank](https://launchpad.net/plank) | The dock for elementary Pantheon, stupidly simple | ✔ |
+| `x11-misc/vala-panel` | [vala-panel](https://github.com/rilian-la-te/vala-panel) | Vala rewrite of SimplePanel | ✔ |
+| `x11-misc/vala-panel-appmenu` | [vala-panel-appmenu](https://github.com/rilian-la-te/vala-panel-appmenu) | Global Menu for Vala Panel (and xfce4-panel and mate-panel) | ✔ |
 | `x11-themes/flat-remix` | [Flat Remix](https://github.com/daniruiz/flat-remix) | A flat theme with transparent elements | |
 | `x11-themes/flat-remix-gnome` | [Flat Remix GNOME](https://github.com/daniruiz/flat-remix-gnome) | A flat theme with transparent elements | |
 | `x11-themes/flat-remix-gtk` | [Flat Remix GTK](https://github.com/daniruiz/flat-remix-gtk) | A flat theme with transparent elements | |
-| `x11-themes/mbuntu-plymouth` | [MBuntu-plymouth](https://launchpad.net/~noobslab/+archive/ubuntu/themes) | MBuntu plymouth theme | OSX-like boot splash theme |
-| `x11-themes/mbuntu-y-icons` | [MBuntu-Y-icons](https://launchpad.net/~noobslab/+archive/ubuntu/themes) | MBuntu Y icons & cursors themes | OSX Yosemite-like icons & cursors |
-| `x11-themes/mbuntu-y-themes` | [MBuntu-Y-themes](https://launchpad.net/~noobslab/+archive/ubuntu/themes) | MBuntu Y themes | OSX Yosemite-like themes |
-| `x11-themes/mbuntu-themes` | [MBuntu-themes](https://launchpad.net/~noobslab/+archive/ubuntu/themes) | MBuntu themes | OSX-like themes |
-| `x11-themes/OSX-MATE` | [OSX-MATE](https://github.com/rohithmadhavan/OSX-MATE) | OSX-MATE theme - Based on Radiant-MATE | requires `x11-themes/mate-icon-theme-faenza` |
+| `x11-themes/yaru` | [Yaru](https://github.com/ubuntu/yaru) | Ubuntu community theme "yaru". Better than a 🌯. | |
 
 ## How to use
 

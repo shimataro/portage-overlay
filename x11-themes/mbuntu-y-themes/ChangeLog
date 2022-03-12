@@ -1,9 +1,0 @@
-# ChangeLog for x11-themes/mbuntu-y-themes
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
-# $Header: $
-
-  13 Oct 2015; Shimataro <shimataro@zelkova.cc> +mbuntu-y-themes-3.12.ebuild, +mbuntu-y-themes-3.12a.ebuild, +mbuntu-y-themes-3.14.2.ebuild:
-  Fixed ${S}
-
-  10 Oct 2015; Shimataro <shimataro@zelkova.cc> +mbuntu-y-themes-3.12.ebuild, +mbuntu-y-themes-3.12a.ebuild, +mbuntu-y-themes-3.14.2.ebuild, +metadata.xml:
-  first release of ebuild package.

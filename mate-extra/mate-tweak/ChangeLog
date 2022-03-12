@@ -1,6 +1,0 @@
-# ChangeLog for mate-extra/mate-tweak
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
-# $Header: $
-
-  07 Jul 2016; Shimataro <shimataro@zelkova.cc> +mate-tweak-16.10.1.ebuild, +mate-tweak-3.5.10.ebuild, +metadata.xml:
-  first release of ebuild package.

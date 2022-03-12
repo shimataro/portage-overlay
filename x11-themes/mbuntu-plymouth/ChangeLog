@@ -1,6 +1,0 @@
-# ChangeLog for x11-themes/mbuntu-plymouth
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
-# $Header: $
-
-  23 Oct 2015; Shimataro <shimataro@zelkova.cc> +mbuntu-plymouth-3.6.ebuild, +mbuntu-plymouth-3.10.ebuild, +metadata.xml:
-  first release of ebuild package.
