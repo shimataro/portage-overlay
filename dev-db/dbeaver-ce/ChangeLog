@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/dbeaver-ce
-# Copyright 1999-2021 Gentoo Foundation; Distributed under the GPL v3
+# Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
+
+  12 Mar 2022; shimataro <shimataro@zelkova.cc> +dbeaver-ce-22.0.0.ebuild:
+  Version bump.
 
   23 Feb 2022; shimataro <shimataro@zelkova.cc> +dbeaver-ce-21.3.5.ebuild:
   Version bump.
