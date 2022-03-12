@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/yaru
-# Copyright 1999-2021 Gentoo Foundation; Distributed under the GPL v3
+# Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
+
+  13 Mar 2022; shimataro <info@shimataro.me> +yaru-22.04.1.ebuild:
+  Version bump.
 
   15 Dec 2021; shimataro <shimataro@zelkova.cc> -yaru-20.04.6.ebuild, -yaru-20.04.7.ebuild, -yaru-20.04.8.ebuild, -yaru-20.10.1.ebuild, -yaru-20.10.2.ebuild, +yaru-20.04.11.ebuild, +yaru-20.10.6.1.ebuild:
   Drop old files.
