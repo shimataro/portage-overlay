@@ -1,6 +1,9 @@
-# ChangeLog for app-crypt/veracrypt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v3
+# ChangeLog for x11-misc/vala-panel
+# Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
+
+  13 Mar 2022; shimataro <info@shimataro.me> +vala-panel-0.4.92.ebuild:
+  Version bump.
 
   10 Oct 2018; shimataro <shimataro@zelkova.cc> +vala-panel-0.4.63.ebuild, +vala-panel-9999.ebuild, +metadata.xml:
   first release of ebuild package.
