@@ -18,13 +18,13 @@ HOMEPAGE="https://launchpad.net/bamf"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64 x86"
 IUSE="+introspection doc static-libs"
 
 RDEPEND="
 	dev-libs/dbus-glib
 	dev-util/gdbus-codegen
-	dev-libs/glib:2
+	>=dev-libs/glib-2.38:2
 	gnome-base/libgtop:2
 	x11-libs/gtk+:3
 	x11-libs/libX11
