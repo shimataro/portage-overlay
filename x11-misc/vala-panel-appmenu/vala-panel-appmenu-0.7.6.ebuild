@@ -16,7 +16,7 @@ EGIT_COMMIT="${PV}"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="amd64 ~x86"
 IUSE="xfce mate jayatana -wayland"
 REQUIRED_USE="|| ( xfce mate )"
 
@@ -38,6 +38,9 @@ RDEPEND="
 "
 
 src_prepare() {
+	# "nb" appears twice, fixed in 442bceb.
+	sed -i 's/nb //' "./po/LINGUAS"
+
 	eapply_user
 	./autogen.sh
 	vala_src_prepare
