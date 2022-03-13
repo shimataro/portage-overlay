@@ -18,7 +18,6 @@ personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
 | [`www-misc/webtaku`](./www-misc/webtaku) | [webtaku](https://github.com/shimataro/webtaku) | webpage snapshot image generator | ✔ | |
 | [`x11-libs/bamf`](./x11-libs/bamf) | [BAMF](https://launchpad.net/bamf) | Removes the headache of applications matching into a simple DBus daemon and c wrapper library | ✔ | |
 | [`x11-misc/plank`](./x11-misc/plank) | [Plank](https://launchpad.net/plank) | The dock for elementary Pantheon, stupidly simple | ✔ | |
-| [`x11-misc/vala-panel`](./x11-misc/vala-panel) | [vala-panel](https://github.com/rilian-la-te/vala-panel) | Vala rewrite of SimplePanel | ✔ | |
 | [`x11-misc/vala-panel-appmenu`](./x11-misc/vala-panel-appmenu) | [vala-panel-appmenu](https://github.com/rilian-la-te/vala-panel-appmenu) | Global Menu for Vala Panel (and xfce4-panel and mate-panel) | ✔ | requires JDK9 or higher |
 | [`x11-themes/flat-remix`](./x11-themes/flat-remix) | [Flat Remix](https://github.com/daniruiz/flat-remix) | A flat theme with transparent elements | | |
 | [`x11-themes/flat-remix-gnome`](./x11-themes/flat-remix-gnome) | [Flat Remix GNOME](https://github.com/daniruiz/flat-remix-gnome) | A flat theme with transparent elements | | |
