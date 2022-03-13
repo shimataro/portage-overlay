@@ -5,7 +5,7 @@ personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
 ## Included packages
 
 | package | name | description | generates native code | note |
-|---------|------|-------------|------|
+|---------|------|-------------|-----------------------|------|
 | [`app-admin/enpass`](./app-admin/enpass) | [Enpass](https://www.enpass.io/) | Password Manager | | |
 | [`app-editors/code`](./app-editors/code) | [Code](https://github.com/elementary/code) | Code editor designed for elementary OS | ✔ | |
 | [`dev-db/dbeaver-ce`](./dev-db/dbeaver-ce) | [DBeaver Community](https://dbeaver.io/) | Universal Database Tool | | |
