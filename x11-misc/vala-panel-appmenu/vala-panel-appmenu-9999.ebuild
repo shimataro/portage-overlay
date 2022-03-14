@@ -1,11 +1,11 @@
 # Copyright 1999-2022 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=8
 
 VALA_MIN_API_VERSION=0.24
 
-inherit git-r3 meson ninja-utils vala gnome2-utils
+inherit git-r3 meson vala gnome2-utils
 
 DESCRIPTION="Global Menu for Vala Panel (and xfce4-panel and mate-panel)"
 HOMEPAGE="https://github.com/rilian-la-te/vala-panel-appmenu"
