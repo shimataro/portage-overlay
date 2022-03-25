@@ -13,6 +13,7 @@ personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
 | [`dev-util/idea-ultimate`](./dev-util/idea-ultimate) | [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) | Capable and Ergonomic IDE for JVM | | |
 | [`dev-vcs/github-desktop`](./dev-vcs/github-desktop) | [GitHub Desktop (unofficial)](https://github.com/shiftkey/desktop) | Fork of GitHub Desktop to support various Linux distributions | | |
 | [`media-fonts/morisawa-biz-ud-gothic`](./media-fonts/morisawa-biz-ud-gothic) | [Morisawa BIZ UDGothic](https://github.com/googlefonts/morisawa-biz-ud-gothic) | BIZ UDゴシック | | |
+| [`media-fonts/morisawa-biz-ud-mincho`](./media-fonts/morisawa-biz-ud-mincho) | [Morisawa BIZ UDMincho](https://github.com/googlefonts/morisawa-biz-ud-mincho) | BIZ UD明朝 | | |
 | [`media-fonts/source-han-code-jp`](./media-fonts/source-han-code-jp) | [Source Han Code JP](https://github.com/adobe-fonts/source-han-code-jp) | Source Han Code JP / 源ノ角ゴシック | | |
 | [`media-fonts/source-han-serif`](./media-fonts/source-han-serif) | [Source Han Serif](https://github.com/adobe-fonts/source-han-serif) | Source Han Serif / 源ノ明朝 | | |
 | [`net-im/caprine`](./net-im/caprine) | [Caprine](https://sindresorhus.com/caprine/) | Elegant Facebook Messenger desktop app | | |

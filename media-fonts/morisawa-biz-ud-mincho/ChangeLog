@@ -1,0 +1,6 @@
+# ChangeLog for media-fonts/morisawa-biz-ud-mincho
+# Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
+# $Header: $
+
+  25 Mar 2012; shimataro <info@shimataro.me> +morisawa-biz-ud-mincho-1.001.ebuild:
+  Add new package.
