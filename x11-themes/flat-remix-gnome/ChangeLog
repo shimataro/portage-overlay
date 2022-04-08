@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/flat-remix-gnome
-# Copyright 1999-2021 Gentoo Foundation; Distributed under the GPL v3
+# Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
+
+  09 Apr 2022; shimataro <info@shimataro.me> +flat-remix-gnome-20220407.ebuild:
+  Version bump.
 
   27 Dec 2021; shimataro <shimataro@zelkova.cc> +flat-remix-gnome-20211223.ebuild:
   Version bump.
