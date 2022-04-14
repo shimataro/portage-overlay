@@ -2,6 +2,9 @@
 # Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  14 Apr 2022; shimataro <info@shimataro.me> +yaru-22.04.4.ebuild:
+  Version bump.
+
   31 Mar 2022; shimataro <info@shimataro.me> +yaru-22.04.3.ebuild, +yaru-22.04.3.1.ebuild:
   Version bump.
 
