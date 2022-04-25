@@ -2,6 +2,9 @@
 # Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  25 Apr 2022; shimataro <info@shimataro.me> +github-desktop-2.9.14_rc1.ebuild:
+  Version bump.
+
   16 Apr 2022; shimataro <info@shimataro.me> +github-desktop-2.9.13_rc1.ebuild, +github-desktop-2.9.14_rc1.ebuild, +github-desktop-2.9.14_rc2.ebuild:
   Version bump.
 
