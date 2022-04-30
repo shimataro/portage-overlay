@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
+EAPI=8
 
-inherit meson git-r3 gnome2-utils
+inherit meson git-r3 xdg-utils
 
 DESCRIPTION="Ubuntu community theme \"yaru\"."
 HOMEPAGE="https://github.com/ubuntu/yaru"
@@ -20,21 +20,22 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="
-	dev-vcs/git
-"
-RDEPEND="
-	x11-themes/gtk-engines-murrine
-	x11-themes/gnome-themes-standard
+    dev-vcs/git
 "
 
-pkg_preinst() {
-	gnome2_icon_savelist
-}
+BDEPEND="
+    dev-lang/sassc
+"
+
+RDEPEND="
+    x11-themes/gtk-engines-murrine
+    x11-themes/gnome-themes-standard
+"
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+    xdg_icon_cache_update
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+    xdg_icon_cache_update
 }
