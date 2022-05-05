@@ -1,11 +1,11 @@
-# Copyright 1999-2020 Gentoo Foundation
+# Copyright 1999-2022 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 # To check if there's a new version available:
 # curl -so- https://apt.enpass.io/dists/stable/main/binary-amd64/Packages.gz | zegrep "Package|Version|Depends" | head -n 3
 
-EAPI=5
+EAPI=8
 
 inherit unpacker gnome2-utils xdg-utils
 
@@ -19,9 +19,11 @@ KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND="
-	x11-libs/libXScrnSaver
-	sys-process/lsof
 	net-misc/curl[adns]
+	sys-process/lsof
+	x11-libs/libXScrnSaver
+	x11-libs/libxkbcommon
+	x11-libs/libXinerama
 "
 
 S=${WORKDIR}
