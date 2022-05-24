@@ -2,6 +2,12 @@
 # Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  24 May 2022; shimataro <info@shimataro.me> +enpass-6.8.1.1063.ebuild:
+  Version bump.
+
+  05 May 2022; shimataro <info@shimataro.me> -app-admin/enpass/enpass-6.4.0.631.ebuild, -app-admin/enpass/enpass-6.4.1.643.ebuild, -app-admin/enpass/enpass-6.5.0.707.ebuild, -app-admin/enpass/enpass-6.5.1.723.ebuild, -app-admin/enpass/enpass-6.6.1.809.ebuild, -app-admin/enpass/enpass-6.6.3.835.ebuild, -app-admin/enpass/enpass-6.6.0.775.ebuild:
+  Drop old versions.
+
   05 May 2022; shimataro <info@shimataro.me> +enpass-6.8.9.1059.ebuild:
   Version bump.
 
