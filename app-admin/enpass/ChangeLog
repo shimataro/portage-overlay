@@ -2,6 +2,9 @@
 # Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  15 Nov 2022; shimataro <info@shimataro.me> +enpass-6.8.4.1167.ebuild:
+  Version bump.
+
   05 Oct 2022; shimataro <info@shimataro.me> +enpass-6.8.3.1153.ebuild:
   Version bump.
 
