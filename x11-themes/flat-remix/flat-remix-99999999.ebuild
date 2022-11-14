@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit git-r3 gnome2-utils
+inherit git-r3 gnome2-utils xdg-utils
 
 DESCRIPTION="A flat theme with transparent elements"
 HOMEPAGE="https://github.com/daniruiz/flat-remix"
@@ -33,9 +33,9 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 }

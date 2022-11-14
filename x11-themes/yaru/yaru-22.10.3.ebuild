@@ -4,7 +4,7 @@
 
 EAPI=8
 
-inherit meson git-r3 gnome2-utils
+inherit meson git-r3 gnome2-utils xdg-utils
 
 DESCRIPTION="Ubuntu community theme \"yaru\"."
 HOMEPAGE="https://github.com/ubuntu/yaru"
@@ -32,9 +32,9 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 }
