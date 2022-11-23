@@ -2,6 +2,9 @@
 # Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  23 Nov 2022; shimataro <info@shimataro.me> +dbeaver-ce-22.2.5.ebuild:
+  Version bump.
+
   08 Nov 2022; shimataro <info@shimataro.me> +dbeaver-ce-22.2.4.ebuild:
   Version bump.
 
