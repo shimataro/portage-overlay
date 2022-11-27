@@ -32,7 +32,7 @@ RDEPEND="
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	>=x11-libs/bamf-0.5.0
-	>=x11-libs/libwnck-3.4.8
+	|| ( =x11-libs/libwnck-40.1:3 >x11-libs/libwnck-43.0:3 )
 	xfce? (
 		>=xfce-base/xfce4-panel-4.11.2
 		>=xfce-base/libxfce4ui-4.11.2
