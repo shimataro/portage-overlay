@@ -2,6 +2,9 @@
 # Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  08 Dec 2022; shimataro <info@shimataro.me> +morisawa-biz-ud-mincho-1.06.ebuild:
+  Version bump.
+
   05 May 2022; shimataro <info@shimataro.me> +morisawa-biz-ud-mincho-1.05.ebuild:
   Version bump.
 
