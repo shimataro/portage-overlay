@@ -32,11 +32,15 @@ CDEPEND="
 	x11-libs/vte:2.91
 "
 
+BDEPEND="
+	$(vala_depend)
+"
+
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
 
 src_prepare() {
-	export VALAC=$(type -P valac-$(vala_best_api_version))
+	vala_setup
 
 	epatch_user
 	eapply_user
