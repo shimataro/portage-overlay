@@ -2,8 +2,11 @@
 # Copyright 1999-2023 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
-  29 Mar 2023; shimataro <info@shimataro.me> -dbeaver-ce-22.3.0.ebuild, -dbeaver-ce-22.3.1.ebuild, -dbeaver-ce-22.3.2.ebuild, -dbeaver-ce-22.3.3.ebuild, -dbeaver-ce-22.3.4.ebuild:
+  16 Apr 2023; shimataro <info@shimataro.me> +dbeaver-ce-23.0.2.ebuild:
   Version bump.
+
+  29 Mar 2023; shimataro <info@shimataro.me> -dbeaver-ce-22.3.0.ebuild, -dbeaver-ce-22.3.1.ebuild, -dbeaver-ce-22.3.2.ebuild, -dbeaver-ce-22.3.3.ebuild, -dbeaver-ce-22.3.4.ebuild:
+  Drop old versions.
 
   29 Mar 2023; shimataro <info@shimataro.me> +dbeaver-ce-23.0.1.ebuild:
   Version bump.
@@ -21,7 +24,7 @@
   Version bump.
 
   27 Dec 2022; shimataro <info@shimataro.me> -dev-db/dbeaver-ce/dbeaver-ce-22.2.0.ebuild, -dev-db/dbeaver-ce/dbeaver-ce-22.2.1.ebuild, -dev-db/dbeaver-ce/dbeaver-ce-22.2.2.ebuild, -dev-db/dbeaver-ce/dbeaver-ce-22.2.3.ebuild, -dev-db/dbeaver-ce/dbeaver-ce-22.2.4.ebuild, -dev-db/dbeaver-ce/dbeaver-ce-22.2.5.ebuild:
-  Version bump.
+  Drop old versions.
 
   27 Dec 2022; shimataro <info@shimataro.me> +dbeaver-ce-22.3.1.ebuild:
   Version bump.
