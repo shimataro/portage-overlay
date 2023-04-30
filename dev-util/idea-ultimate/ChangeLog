@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/idea-ultimate
-# Copyright 1999-2021 Gentoo Foundation; Distributed under the GPL v3
+# Copyright 1999-2023 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
+
+  30 Apr 2023; shimataro <shimataro@zelkova.cc> +idea-ultimate-2023.1.ebuild, +idea-ultimate-2023.1.1.ebuild:
+  Version bump.
 
   30 Jan 2022; shimataro <shimataro@zelkova.cc> +idea-ultimate-2021.3.2.ebuild:
   Version bump.
