@@ -4,7 +4,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python{3_7,3_8,3_9} )
+PYTHON_COMPAT=( python3_{9..10} )
 VALA_MIN_API_VERSION=0.20
 VALA_USE_DEPEND=vapigen
 
@@ -28,14 +28,18 @@ RDEPEND="
 	gnome-base/libgtop:2
 	x11-libs/gtk+:3
 	x11-libs/libX11
-	>=x11-libs/libwnck-3.4.7:3"
+	>=x11-libs/libwnck-3.4.7:3
+"
 BDEPEND="
 	$(vala_depend)
 	${PYTHON_DEPS}
-	dev-python/lxml
+	$(python_gen_any_dep '
+		dev-python/lxml[${PYTHON_USEDEP}]
+	')
 	dev-util/gtk-doc
 	introspection? ( dev-libs/gobject-introspection )
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	sed -i 's/-Werror//' configure.ac
