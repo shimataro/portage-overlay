@@ -19,6 +19,8 @@ IUSE=""
 REQUIRED_USE=""
 
 CDEPEND="
+	app-text/editorconfig-core-c
+	app-text/gtkspell:3/0
 	>=dev-libs/glib-2.30.0:2
 	>=dev-libs/libgee-0.8.5:0.8
 	>=x11-libs/gtk+-3.6.0:3
