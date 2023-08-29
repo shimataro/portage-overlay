@@ -2,6 +2,9 @@
 # Copyright 1999-2023 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  30 Aug 2023; shimataro <info@shimataro.me> +idea-ultimate-2023.1.ebuild, +idea-ultimate-2023.1.1.ebuild, +idea-ultimate-2023.2.ebuild:
+  Update ebuilds.
+
   02 Aug 2023; shimataro <info@shimataro.me> +idea-ultimate-2023.2.ebuild:
   Version bump.
 
