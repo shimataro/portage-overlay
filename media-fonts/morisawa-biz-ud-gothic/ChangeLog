@@ -2,6 +2,9 @@
 # Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  09 Sep 2023; shimataro <info@shimataro.me> +morisawa-biz-ud-gothic-1.051.ebuild:
+  Version bump.
+
   05 May 2022; shimataro <info@shimataro.me> +morisawa-biz-ud-gothic-1.05.ebuild:
   Version bump.
 
