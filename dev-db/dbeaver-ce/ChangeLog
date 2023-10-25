@@ -2,6 +2,9 @@
 # Copyright 1999-2023 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  26 Oct 2023; shimataro <info@shimataro.me> +dbeaver-ce-23.2.3.ebuild:
+  Version bump.
+
   09 Oct 2023; shimataro <info@shimataro.me> -dbeaver-ce-23.1.0.ebuild, -dbeaver-ce-23.1.1.ebuild, -dbeaver-ce-23.1.2.ebuild, -dbeaver-ce-23.1.3.ebuild, -dbeaver-ce-23.1.4.ebuild, -dbeaver-ce-23.1.5.ebuild:
   Drop old packages.
 
