@@ -1,6 +1,9 @@
 # ChangeLog for net-im/caprine
-# Copyright 1999-2023 Gentoo Foundation; Distributed under the GPL v3
+# Copyright 1999-2024 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
+
+  23 Feb 2024; shimataro <info@shimataro.me> +caprine-2.59.3.ebuild, +caprine-2.59.4.ebuild:
+  Version bump.
 
   15 Oct 2023; shimataro <info@shimataro.me> +caprine-2.59.1.ebuild:
   Version bump.
