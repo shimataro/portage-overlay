@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/vala-panel-appmenu
-# Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
+# Copyright 1999-2024 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
+
+  28 Feb 2024; shimataro <info@shimataro.me> +vala-panel-appmenu-0.7.7.ebuild, +vala-panel-appmenu-0.7.7.ebuild, +vala-panel-appmenu-24.02.ebuild:
+  Version bump.
 
   27 Nov 2022; shimataro <info@shimataro.me> vala-panel-appmenu-0.7.6.ebuild, vala-panel-appmenu-9999.ebuild:
   Avoid bug of libwnck-43.0.
