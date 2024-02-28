@@ -51,7 +51,7 @@ src_prepare() {
 
 	eapply_user
 	./autogen.sh
-	vala_setup --vala-api-version 0.56
+	vala_setup
 	vala_src_prepare
 }
 
