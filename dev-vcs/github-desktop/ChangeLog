@@ -2,6 +2,9 @@
 # Copyright 1999-2024 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  03 Jul 2024; shimataro <info@shimataro.me> +github-desktop-3.4.0_rc1.ebuild, +github-desktop-3.4.0_rc2.ebuild, +github-desktop-3.4.1_rc1.ebuild, +github-desktop-3.4.2_rc1.ebuild:
+  Version bump.
+
   05 Jun 2024; shimataro <info@shimataro.me> +github-desktop-3.3.13_rc1.ebuild, +github-desktop-3.3.14_rc1.ebuild, +github-desktop-3.3.15_rc1.ebuild, +github-desktop-3.3.16_rc1.ebuild, +github-desktop-3.3.17_rc1.ebuild, +github-desktop-3.3.18_rc1.ebuild:
   Version bump.
 
