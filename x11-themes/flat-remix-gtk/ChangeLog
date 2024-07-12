@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/flat-remix-gtk
-# Copyright 1999-2022 Gentoo Foundation; Distributed under the GPL v3
+# Copyright 1999-2024 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
+
+  13 Jul 2024; shimataro <info@shimataro.me> flat-remix-gtk-20220118.ebuild, flat-remix-gtk-20220215.ebuild, flat-remix-gtk-20220310.ebuild, flat-remix-gtk-20220321.ebuild, flat-remix-gtk-20220330.ebuild, flat-remix-gtk-20220412.ebuild, flat-remix-gtk-20220427.ebuild, flat-remix-gtk-20220527.ebuild, flat-remix-gtk-20220627.ebuild, flat-remix-gtk-99999999.ebuild:
+  EAPI=8.
 
   28 Jun 2022; shimataro <info@shimataro.me> +flat-remix-gtk-20220627.ebuild:
   Version bump.
