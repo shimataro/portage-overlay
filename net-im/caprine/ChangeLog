@@ -2,7 +2,13 @@
 # Copyright 1999-2024 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
-  23 Feb 2024; shimataro <info@shimataro.me> +caprine-2.59.3.ebuild, +caprine-2.59.4.ebuild:
+  19 Jul 2024; shimataro <info@shimataro.me> -caprine-2.59.0.ebuild, -caprine-2.59.1.ebuild:
+  Drop old versions.
+
+  23 Feb 2024; shimataro <info@shimataro.me> +caprine-2.59.2.ebuild, +caprine-2.59.3.ebuild:
+  Version bump.
+
+  23 Feb 2024; shimataro <info@shimataro.me> +caprine-2.59.2.ebuild, +caprine-2.59.3.ebuild:
   Version bump.
 
   15 Oct 2023; shimataro <info@shimataro.me> +caprine-2.59.1.ebuild:
