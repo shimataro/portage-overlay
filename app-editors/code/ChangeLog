@@ -2,12 +2,14 @@
 # Copyright 1999-2024 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  26 Jul 2024; shimataro <info@shimataro.me> +code-7.3.0.ebuild:
+  Version bump.
+
   19 Jan 2024; shimataro <info@shimataro.me> +code-7.2.0.ebuild:
   Version bump.
 
   02 Aug 2023; shimataro <info@shimataro.me> +code-7.1.0.ebuild:
   Version bump.
-
 
   04 Jun 2023; shimataro <info@shimataro.me> -code-6.1.0.ebuild, -code-6.2.0.ebuild:
   Remove old versions.
