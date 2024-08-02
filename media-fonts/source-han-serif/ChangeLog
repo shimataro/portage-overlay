@@ -2,6 +2,9 @@
 # Copyright 1999-2024 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  03 Aug 2024; shimataro <info@shimataro.me> +source-han-serif-2.003.ebuild:
+  Version bump.
+
   10 Mar 2024; shimataro <info@shimataro.me> +source-han-serif-2.002.ebuild:
   Version bump.
 
