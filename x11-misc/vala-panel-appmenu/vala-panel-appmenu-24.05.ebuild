@@ -46,9 +46,6 @@ RDEPEND="
 "
 
 src_prepare() {
-	# "nb" appears twice, fixed in 442bceb.
-	sed -i 's/nb //' "./po/LINGUAS"
-
 	eapply_user
 	./autogen.sh
 	vala_setup --vala-api-version 0.56
