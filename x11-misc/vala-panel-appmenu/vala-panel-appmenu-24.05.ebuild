@@ -8,7 +8,7 @@ VALA_MIN_API_VERSION=0.24
 inherit git-r3 meson vala gnome2-utils
 
 DESCRIPTION="Global Menu for Vala Panel (and xfce4-panel and mate-panel)"
-HOMEPAGE="https://github.com/rilian-la-te/vala-panel-appmenu"
+HOMEPAGE="https://gitlab.com/vala-panel-project/vala-panel-appmenu"
 SRC_URI=""
 
 EGIT_REPO_URI="${HOMEPAGE}.git"
