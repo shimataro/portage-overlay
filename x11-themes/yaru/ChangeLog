@@ -3,6 +3,9 @@
 # $Header: $
 
   10 Nov 2024; shimataro <info@shimataro.me> yaru-24.10.4.ebuild:
+  Add BDEPEND package.
+
+  10 Nov 2024; shimataro <info@shimataro.me> yaru-24.10.4.ebuild:
   Add arm64 support ( requires `~arm64` keyword).
 
   15 Sep 2024; shimataro <info@shimataro.me> +yaru-24.10.2.ebuild, +yaru-24.10.3.ebuild, +yaru-24.10.4.ebuild:

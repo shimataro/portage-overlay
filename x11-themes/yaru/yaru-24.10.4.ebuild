@@ -22,6 +22,9 @@ IUSE=""
 DEPEND="
 	dev-vcs/git
 "
+BDEPEND="
+	dev-lang/sassc
+"
 RDEPEND="
 	x11-themes/gtk-engines-murrine
 	x11-themes/gnome-themes-standard
