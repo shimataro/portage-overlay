@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -30,6 +30,7 @@ CDEPEND="
 	>=dev-libs/libpeas-1.0
 	>=dev-libs/libgit2-glib-1.0
 	media-libs/fontconfig
+	net-libs/libsoup:2.4
 	x11-libs/pango
 	x11-libs/vte:2.91
 "
