@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/vala-panel-appmenu
-# Copyright 1999-2024 Gentoo Foundation; Distributed under the GPL v3
+# Copyright 1999-2025 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
+
+  20 Apr 2025; shimataro <info@shimataro.me> +vala-panel-appmenu-25.04.ebuild:
+  Version bump.
 
   29 Sep 2024; shimataro <info@shimataro.me> vala-panel-appmenu-24.02.ebuild, vala-panel-appmenu-24.05.ebuild, vala-panel-appmenu-9999.ebuild:
   Change upstream repository.
