@@ -2,6 +2,9 @@
 # Copyright 1999-2025 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  29 Apr 2025; shimataro <info@shimataro.me> -yaru-24.04.0.ebuild, -yaru-24.04.1.ebuild, -yaru-24.04.2.ebuild, -yaru-24.04.3.ebuild, -yaru-24.10.1.ebuild, -yaru-24.10.2.ebuild, -yaru-24.10.3.ebuild, -yaru-24.10.4.ebuild:
+  Drop old versions.
+
   29 Apr 2025; shimataro <info@shimataro.me> +yaru-25.04.2.ebuild:
   Version bump.
 
