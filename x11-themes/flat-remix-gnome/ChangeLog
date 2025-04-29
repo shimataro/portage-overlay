@@ -2,6 +2,9 @@
 # Copyright 1999-2025 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  29 Apr 2025; shimataro <info@shimataro.me> -flat-remix-gnome-20230507.ebuild, -flat-remix-gnome-20230508.ebuild, -flat-remix-gnome-20230606.ebuild, -flat-remix-gnome-20231026.ebuild, -flat-remix-gnome-20240411.ebuild, -flat-remix-gnome-20240418.ebuild, -flat-remix-gnome-20240503.ebuild, -flat-remix-gnome-20240526.ebuild, -flat-remix-gnome-20240706.ebuild, -flat-remix-gnome-20240721.ebuild, -flat-remix-gnome-20240813.ebuild, -flat-remix-gnome-20240922.ebuild, -flat-remix-gnome-20241208.ebuild:
+  Drop old versions.
+
   29 Apr 2025; shimataro <info@shimataro.me> +flat-remix-gnome-20250413.ebuild:
   Version bump.
 
