@@ -18,7 +18,6 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="xfce mate jayatana -wayland"
-REQUIRED_USE="|| ( xfce mate )"
 
 DEPEND="
 	$(vala_depend)
@@ -49,7 +48,6 @@ src_prepare() {
 	eapply_user
 	./autogen.sh
 	vala_setup --vala-api-version 0.56
-	vala_src_prepare
 }
 
 src_configure() {
