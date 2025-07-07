@@ -8,7 +8,7 @@ personal portage repository for [Gentoo Linux](http://www.gentoo.org/)
 |---------|------|-------------|-----------------------|------|
 | [`app-admin/enpass`](./app-admin/enpass) | [Enpass](https://www.enpass.io/) | Password Manager | | |
 | [`app-editors/code`](./app-editors/code) | [Code](https://github.com/elementary/code) | Code editor designed for elementary OS | ✔ | |
-| [`dev-db/dbeaver-ce`](./dev-db/dbeaver-ce) | [DBeaver Community](https://dbeaver.io/) | Universal Database Tool | | |
+| ~~`dev-db/dbeaver-ce`~~ | [DBeaver Community](https://dbeaver.io/) | Universal Database Tool | | Removed. Use [dev-db/dbeaver-bin](vhttps://packages.gentoo.org/packages/dev-db/dbeaver-bin). |
 | [`dev-db/sequeler`](./dev-db/sequeler) | [Sequeler](https://github.com/Alecaddd/sequeler) | SQL Client built in Vala | ✔ | |
 | [`dev-util/idea-ultimate`](./dev-util/idea-ultimate) | [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) | Capable and Ergonomic IDE for JVM | | |
 | [`dev-vcs/github-desktop`](./dev-vcs/github-desktop) | [GitHub Desktop (unofficial)](https://github.com/shiftkey/desktop) | Fork of GitHub Desktop to support various Linux distributions | | |
