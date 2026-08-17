@@ -2,6 +2,9 @@
 # Copyright 1999-2026 Gentoo Foundation; Distributed under the GPL v3
 # $Header: $
 
+  18 Aug 2026; shimataro <info@shimataro.me> +keryx-0.10.0.ebuild:
+  Add new package
+
   16 Aug 2026; shimataro <info@shimataro.me> +keryx-0.9.0.ebuild:
   Add new package
 
