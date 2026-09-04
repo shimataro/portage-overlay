@@ -5,23 +5,29 @@
   03 Sep 2026; shimataro <info@shimataro.me> +keryx-0.11.0.ebuild, +keryx-0.12.0.ebuild, +keryx-0.13.0.ebuild:
   Add new package
 
+  05 Sep 2026; shimataro <info@shimataro.me> +keryx-0.14.0.ebuild:
+  Version bump.
+
+  03 Sep 2026; shimataro <info@shimataro.me> +keryx-0.11.0.ebuild, +keryx-0.12.0.ebuild, +keryx-0.13.0.ebuild:
+  Version bump.
+
   18 Aug 2026; shimataro <info@shimataro.me> +keryx-0.10.0.ebuild:
-  Add new package
+  Version bump.
 
   16 Aug 2026; shimataro <info@shimataro.me> +keryx-0.9.0.ebuild:
-  Add new package
+  Version bump.
 
   14 Aug 2026; shimataro <info@shimataro.me> +keryx-0.8.0.ebuild:
-  Add new package
+  Version bump.
 
   12 Aug 2026; shimataro <info@shimataro.me> +keryx-0.7.0.ebuild:
-  Add new package
+  Version bump.
 
   09 Aug 2026; shimataro <info@shimataro.me> +keryx-0.6.4.ebuild:
-  Add new package
+  Version bump.
 
   07 Aug 2026; shimataro <info@shimataro.me> +keryx-0.6.3.ebuild:
-  Add new package
+  Version bump.
 
   06 Aug 2026; shimataro <info@shimataro.me> +keryx-0.6.2.ebuild:
   Add new package
